@@ -1,0 +1,6 @@
+D:\others\telerik HW\TeamWorkKPK\Game-Fifteen-6\obj\x86\Debug\Telerik.csprojResolveAssemblyReference.cache
+D:\others\telerik HW\TeamWorkKPK\Game-Fifteen-6\bin\Debug\Game15.exe
+D:\others\telerik HW\TeamWorkKPK\Game-Fifteen-6\bin\Debug\Game15.pdb
+D:\others\telerik HW\TeamWorkKPK\Game-Fifteen-6\bin\Debug\PowerCollections.dll
+D:\others\telerik HW\TeamWorkKPK\Game-Fifteen-6\obj\x86\Debug\Game15.exe
+D:\others\telerik HW\TeamWorkKPK\Game-Fifteen-6\obj\x86\Debug\Game15.pdb
