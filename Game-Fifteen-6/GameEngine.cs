@@ -7,15 +7,19 @@ namespace GameFifteen
 {
     public class GameEngine
     {
-        private Field gameField;
+        private Field gameField = null;
+        IRenderer console = null;
 
         public GameEngine()
         {
-            this.gameField = new Field();
+            console = new ConsoleRenderer();
+            StartNewGame();
         }
 
         public void StartNewGame()
         {
+            this.gameField = new Field();
+
             do
             {
                 this.gameField.GetRandomField();
@@ -36,28 +40,26 @@ namespace GameFifteen
             startupMessage.AppendLine("Use 'restart' to start a new game.");
             startupMessage.AppendLine("Use 'exit' to quit the game.");
 
-            Console.WriteLine(startupMessage);
+            console.Display(startupMessage.ToString());
         }
 
         private void BeginGame()
         {
             ScoreBoard scoreBoard = new ScoreBoard();
 
-            Console.WriteLine(this.gameField);
+            console.Display(this.gameField.ToString());
 
-            Console.Write("Enter a number to move: ");
-            string inputNumber = Console.ReadLine();
+            string inputNumber = console.Read("Enter a number to move: ");
             bool gameIsFinished = false;
             int moves = 0;
 
-            //Need a documentation
             while (inputNumber != "exit")
             {
                 moves++;
                 switch (inputNumber)
                 {
                     case "top":
-                        Console.WriteLine(scoreBoard);
+                        console.Display(scoreBoard.ToString());
                         break;
                     case "restart":
                         StartNewGame();
@@ -67,7 +69,7 @@ namespace GameFifteen
                         break;
                 }
 
-                Console.WriteLine(this.gameField);
+                console.Display(this.gameField.ToString());
                 gameIsFinished = this.gameField.IsSolved();
 
                 if (gameIsFinished)
@@ -77,37 +79,41 @@ namespace GameFifteen
                     StartNewGame();
                 }
 
-                Console.Write("Enter a number to move: ");
-                inputNumber = Console.ReadLine();
+                inputNumber = console.Read("Enter a number to move: ");
             }
         }
 
         private void MoveNumberIfValid(string inputNumber)
         {
             int numberToMove = -1;
-
             int.TryParse(inputNumber, out numberToMove);
+            int downBound = 0;
+            int upBound = 16;
 
-            if (numberToMove > 0 && numberToMove < 16)
+            if (numberToMove > downBound && numberToMove < upBound)
             {
                 TryToMoveNumber(numberToMove);
             }
             else
             {
-                Console.WriteLine("Illegal command!");
+                console.Display("Illegal command!");
             }
         }
 
-        private void TryToMoveNumber(int numberToMove)
+        private void TryToMoveNumber(int index)
         {
-            if (CheckNeighbours(this.gameField.NumberCoords[0], this.gameField.NumberCoords[numberToMove]))
+            var currCell = this.gameField.NumberCoords[0];
+            var cellToBeMoveTo = this.gameField.NumberCoords[index];
+            bool validNaighbours = CheckNeighbours(currCell, cellToBeMoveTo);
+
+            if (validNaighbours)
             {
-                SwapCoords(numberToMove, this.gameField.NumberCoords);
+                SwapCoords(index);
 
-                var row = this.gameField.NumberCoords[numberToMove].Row;
-                var col = this.gameField.NumberCoords[numberToMove].Col;
+                var row = this.gameField.NumberCoords[index].Row;
+                var col = this.gameField.NumberCoords[index].Col;
 
-                this.gameField[row, col] = numberToMove;
+                this.gameField[row, col] = index;
 
                 row = this.gameField.NumberCoords[0].Row;
                 col = this.gameField.NumberCoords[0].Col;
@@ -116,25 +122,27 @@ namespace GameFifteen
             }
             else
             {
-                Console.WriteLine("Illegal command!");
+                console.Display("Illegal command!");
             }
         }
 
-        private void SwapCoords(int index, Dictionary<int, Coords> numberCoords)
+        private void SwapCoords(int index)
         {
+            var numberCoords = this.gameField.NumberCoords;
+
             Coords currCoords = numberCoords[0];
             numberCoords[0] = numberCoords[index];
             numberCoords[index] = currCoords;
         }
 
-        public bool CheckNeighbours(Coords currCell, Coords otherCell)
+        public bool CheckNeighbours(Coords currCell, Coords cellToBeMoveTo)
         {
-            bool cellsRowsMatch = (currCell.Row == otherCell.Row);
-            bool cellsColsMatch = (currCell.Col == otherCell.Col);
-            bool isLeftCell = (currCell.Col == otherCell.Col - 1);
-            bool isRightCell = (currCell.Col == otherCell.Col + 1);
-            bool isUpCell = (currCell.Row == otherCell.Row - 1);
-            bool isDownCell = (currCell.Row == otherCell.Row + 1);
+            bool cellsRowsMatch = (currCell.Row == cellToBeMoveTo.Row);
+            bool cellsColsMatch = (currCell.Col == cellToBeMoveTo.Col);
+            bool isLeftCell = (currCell.Col == cellToBeMoveTo.Col - 1);
+            bool isRightCell = (currCell.Col == cellToBeMoveTo.Col + 1);
+            bool isUpCell = (currCell.Row == cellToBeMoveTo.Row - 1);
+            bool isDownCell = (currCell.Row == cellToBeMoveTo.Row + 1);
 
             if (cellsRowsMatch && (isLeftCell || isRightCell))
             {

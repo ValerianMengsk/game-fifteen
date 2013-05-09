@@ -9,17 +9,20 @@ namespace GameFifteen
     public class ScoreBoard
     {
         private OrderedMultiDictionary<int, string> scoreBoard;
+        private IRenderer console = null;
 
         public ScoreBoard()
         {
             this.scoreBoard = new OrderedMultiDictionary<int, string>(true);
+            console = new ConsoleRenderer();
         }
 
         public void Add(int score)
         {
-            Console.WriteLine("Congratulations! You won the game in {0} moves.", score);
-            Console.Write("Please enter your name for the top scoreboard: ");
-            string name = Console.ReadLine();
+            string message = string.Format("Congratulations! You won the game in {0} moves.", score);
+            console.Display(message);
+
+            string name = console.Read("Please enter your name for the top scoreboard: ");
             this.scoreBoard.Add(score, name);
         }
 

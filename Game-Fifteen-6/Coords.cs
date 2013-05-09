@@ -9,6 +9,7 @@ namespace GameFifteen
     {
         private int row;
         private int col;
+        private const int Dimensions = 4;
 
         public Coords(int row, int col)
         {
@@ -25,9 +26,9 @@ namespace GameFifteen
 
             private set
             {
-                if (value < 0 || value >= int.MaxValue)
+                if (value < 0 || value >= Dimensions)
                 {
-                    throw new ArgumentOutOfRangeException("The row is either too big or too small!");
+                    throw new ArgumentOutOfRangeException("The value you entered for row is either too big or too small!");
                 }
 
                 row = value;
@@ -43,9 +44,9 @@ namespace GameFifteen
 
             private set
             {
-                if (value < 0 || value >= int.MaxValue)
+                if (value < 0 || value >= Dimensions)
                 {
-                    throw new ArgumentOutOfRangeException("The col is either too big or too small!");
+                    throw new ArgumentOutOfRangeException("The value you entered for col is either too big or too small!");
                 }
 
                 col = value;

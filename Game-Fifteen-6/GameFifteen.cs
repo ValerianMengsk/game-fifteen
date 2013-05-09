@@ -10,7 +10,6 @@ namespace GameFifteen
         public static void Main()
         {
             GameEngine engine = new GameEngine();
-            engine.StartNewGame();
         }
     }
 }
