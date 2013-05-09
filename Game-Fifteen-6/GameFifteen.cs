@@ -7,7 +7,7 @@
     {
         public static void Main()
         {
-            GameEngine engine = new GameEngine();
+            GameEngine engine = GameEngine.GetInstace();
         }
     }
 }

@@ -9,7 +9,10 @@
         private Field gameField = null;
         private IRenderer console = null;
 
-        public GameEngine()
+        // Singleton eager initialization.
+        private static GameEngine instance = new GameEngine();
+
+        private GameEngine()
         {
             console = new ConsoleRenderer();
 
@@ -21,6 +24,11 @@
             {
                 console.Display(ex.Message);
             }
+        }
+
+        public static GameEngine GetInstace()
+        {
+            return instance;
         }
 
         public void StartNewGame()
