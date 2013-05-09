@@ -50,6 +50,7 @@ namespace GameFifteen
             bool gameIsFinished = false;
             int moves = 0;
 
+            //Need a documentation
             while (inputNumber != "exit")
             {
                 moves++;
