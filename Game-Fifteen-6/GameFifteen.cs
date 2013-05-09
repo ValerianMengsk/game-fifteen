@@ -1,10 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace GameFifteen
+﻿namespace GameFifteen
 {
+    using System;
+    using System.Linq;
+
     public class GameFifteen
     {
         public static void Main()

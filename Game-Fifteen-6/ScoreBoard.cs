@@ -1,11 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using Wintellect.PowerCollections;
-
-namespace GameFifteen
+﻿namespace GameFifteen
 {
+    using System;
+    using System.Linq;
+    using System.Text;
+    using Wintellect.PowerCollections;
+
     public class ScoreBoard
     {
         private OrderedMultiDictionary<int, string> scoreBoard;
@@ -14,15 +13,15 @@ namespace GameFifteen
         public ScoreBoard()
         {
             this.scoreBoard = new OrderedMultiDictionary<int, string>(true);
-            console = new ConsoleRenderer();
+            this.console = new ConsoleRenderer();
         }
 
         public void Add(int score)
         {
             string message = string.Format("Congratulations! You won the game in {0} moves.", score);
-            console.Display(message);
+            this.console.Display(message);
 
-            string name = console.Read("Please enter your name for the top scoreboard: ");
+            string name = this.console.Read("Please enter your name for the top scoreboard: ");
             this.scoreBoard.Add(score, name);
         }
 

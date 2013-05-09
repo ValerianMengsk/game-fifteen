@@ -1,18 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace GameFifteen
+﻿namespace GameFifteen
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Text;
+
     public class Field
     {
         private int[,] field;
         private Dictionary<int, Coords> numberCoords;
+        private const int Dimesions = 4;
 
         public Field()
         {
-            this.field = new int[4, 4];
+            this.field = new int[Dimesions, Dimesions];
             this.numberCoords = new Dictionary<int, Coords>();
             GetRandomField();
         }
@@ -34,10 +35,10 @@ namespace GameFifteen
         {
             int[,] matrix =
             {
-                {1,2,3,4},
-                {5,6,7,8},
-                {9,10,11,12},
-                {13,14,15,0}
+                {1, 2, 3, 4},
+                {5, 6, 7, 8},
+                {9, 10, 11, 12},
+                {13, 14, 15, 0}
             };
 
             for (int row = 0; row < this.field.GetLength(0); row++)
@@ -75,8 +76,19 @@ namespace GameFifteen
 
         public int this[int row, int col]
         {
-            get { return this.field[row, col]; }
-            set { this.field[row, col] = value; }
+            get 
+            {
+                ValidateDimensions(row, col);
+
+                return this.field[row, col];
+            }
+
+            set 
+            {
+                ValidateDimensions(row, col);
+
+                this.field[row, col] = value;
+            }
         }
 
         public override string ToString()
@@ -104,6 +116,24 @@ namespace GameFifteen
             fieldAsString.Append(" -------------------");
 
             return fieldAsString.ToString();
+        }
+
+        private bool IsInRange(int dimension)
+        {
+            if (dimension < 0 || dimension >= Dimesions)
+            {
+                return false;
+            }
+
+            return true;
+        }
+
+        private void ValidateDimensions(int row, int col)
+        {
+            if (!IsInRange(row) || !IsInRange(col))
+            {
+                throw new ArgumentOutOfRangeException("The dimensions you have provided are out of range!");
+            }
         }
     }
 }

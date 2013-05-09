@@ -1,15 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace GameFifteen
+﻿namespace GameFifteen
 {
+    using System;
+    using System.Linq;
+
     public class Coords
     {
+        private const int Dimensions = 4;
         private int row;
         private int col;
-        private const int Dimensions = 4;
 
         public Coords(int row, int col)
         {
@@ -21,17 +19,14 @@ namespace GameFifteen
         {
             get
             {
-                return row;
+                return this.row;
             }
 
             private set
             {
-                if (value < 0 || value >= Dimensions)
-                {
-                    throw new ArgumentOutOfRangeException("The value you entered for row is either too big or too small!");
-                }
+                CheckIfIsInRange(value);
 
-                row = value;
+                this.row = value;
             }
         }
 
@@ -39,17 +34,22 @@ namespace GameFifteen
         {
             get
             {
-                return col;
+                return this.col;
             }
 
             private set
             {
-                if (value < 0 || value >= Dimensions)
-                {
-                    throw new ArgumentOutOfRangeException("The value you entered for col is either too big or too small!");
-                }
+                CheckIfIsInRange(value);
 
-                col = value;
+                this.col = value;
+            }
+        }
+
+        private void CheckIfIsInRange(int dimension)
+        {
+            if (dimension < 0 || dimension >= Dimensions)
+            {
+                throw new ArgumentOutOfRangeException("The value you entered for col is either too big or too small!");
             }
         }
     }

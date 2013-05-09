@@ -1,19 +1,26 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace GameFifteen
+﻿namespace GameFifteen
 {
+    using System;
+    using System.Linq;
+    using System.Text;
+
     public class GameEngine
     {
         private Field gameField = null;
-        IRenderer console = null;
+        private IRenderer console = null;
 
         public GameEngine()
         {
             console = new ConsoleRenderer();
-            StartNewGame();
+
+            try
+            {
+                StartNewGame();
+            }
+            catch (ArgumentOutOfRangeException ex)
+            {
+                console.Display(ex.Message);
+            }
         }
 
         public void StartNewGame()
