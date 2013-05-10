@@ -24,7 +24,7 @@
 
             private set
             {
-                CheckIfIsInRange(value);
+                this.CheckIfIsInRange(value);
 
                 this.row = value;
             }
@@ -39,7 +39,7 @@
 
             private set
             {
-                CheckIfIsInRange(value);
+                this.CheckIfIsInRange(value);
 
                 this.col = value;
             }

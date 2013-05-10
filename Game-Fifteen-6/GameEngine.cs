@@ -6,23 +6,23 @@
 
     public class GameEngine
     {
-        private Field gameField = null;
-        private IRenderer console = null;
-
         // Singleton eager initialization.
         private static GameEngine instance = new GameEngine();
 
+        private Field gameField = null;
+        private IRenderer console = null;
+
         private GameEngine()
         {
-            console = new ConsoleRenderer();
+            this.console = new ConsoleRenderer();
 
             try
             {
-                StartNewGame();
+                this.StartNewGame();
             }
             catch (ArgumentOutOfRangeException ex)
             {
-                console.Display(ex.Message);
+                this.console.Display(ex.Message);
             }
         }
 
@@ -38,11 +38,33 @@
             do
             {
                 this.gameField.GetRandomField();
-            } while (this.gameField.IsSolved());
+            } 
+            while (this.gameField.IsSolved());
 
-            PrintStartupMessage();
+            this.PrintStartupMessage();
 
-            BeginGame();
+            this.BeginGame();
+        }
+
+        public bool CheckNeighbours(Coords currCell, Coords cellToBeMoveTo)
+        {
+            bool cellsRowsMatch = currCell.Row == cellToBeMoveTo.Row;
+            bool cellsColsMatch = currCell.Col == cellToBeMoveTo.Col;
+            bool isLeftCell = currCell.Col == cellToBeMoveTo.Col - 1;
+            bool isRightCell = currCell.Col == cellToBeMoveTo.Col + 1;
+            bool isUpCell = currCell.Row == cellToBeMoveTo.Row - 1;
+            bool isDownCell = currCell.Row == cellToBeMoveTo.Row + 1;
+
+            if (cellsRowsMatch && (isLeftCell || isRightCell))
+            {
+                return true;
+            }
+            else if (cellsColsMatch && (isUpCell || isDownCell))
+            {
+                return true;
+            }
+
+            return false;
         }
 
         private void PrintStartupMessage()
@@ -55,16 +77,16 @@
             startupMessage.AppendLine("Use 'restart' to start a new game.");
             startupMessage.AppendLine("Use 'exit' to quit the game.");
 
-            console.Display(startupMessage.ToString());
+            this.console.Display(startupMessage.ToString());
         }
 
         private void BeginGame()
         {
             ScoreBoard scoreBoard = new ScoreBoard();
 
-            console.Display(this.gameField.ToString());
+            this.console.Display(this.gameField.ToString());
 
-            string inputNumber = console.Read("Enter a number to move: ");
+            string inputNumber = this.console.Read("Enter a number to move: ");
             bool gameIsFinished = false;
             int moves = 0;
 
@@ -74,27 +96,27 @@
                 switch (inputNumber)
                 {
                     case "top":
-                        console.Display(scoreBoard.ToString());
+                        this.console.Display(scoreBoard.ToString());
                         break;
                     case "restart":
-                        StartNewGame();
+                        this.StartNewGame();
                         break;
                     default:
-                        MoveNumberIfValid(inputNumber);
+                        this.MoveNumberIfValid(inputNumber);
                         break;
                 }
 
-                console.Display(this.gameField.ToString());
+                this.console.Display(this.gameField.ToString());
                 gameIsFinished = this.gameField.IsSolved();
 
                 if (gameIsFinished)
                 {
                     scoreBoard.Add(moves);
                     moves = 0;
-                    StartNewGame();
+                    this.StartNewGame();
                 }
 
-                inputNumber = console.Read("Enter a number to move: ");
+                inputNumber = this.console.Read("Enter a number to move: ");
             }
         }
 
@@ -103,15 +125,15 @@
             int numberToMove = -1;
             int.TryParse(inputNumber, out numberToMove);
             int downBound = 0;
-            int upBound = 16;
+            int bound = 16;
 
-            if (numberToMove > downBound && numberToMove < upBound)
+            if (numberToMove > downBound && numberToMove < bound)
             {
-                TryToMoveNumber(numberToMove);
+                this.TryToMoveNumber(numberToMove);
             }
             else
             {
-                console.Display("Illegal command!");
+                this.console.Display("Illegal command!");
             }
         }
 
@@ -119,11 +141,11 @@
         {
             var currCell = this.gameField.NumberCoords[0];
             var cellToBeMoveTo = this.gameField.NumberCoords[index];
-            bool validNaighbours = CheckNeighbours(currCell, cellToBeMoveTo);
+            bool validNaighbours = this.CheckNeighbours(currCell, cellToBeMoveTo);
 
             if (validNaighbours)
             {
-                SwapCoords(index);
+                this.SwapCoords(index);
 
                 var row = this.gameField.NumberCoords[index].Row;
                 var col = this.gameField.NumberCoords[index].Col;
@@ -137,7 +159,7 @@
             }
             else
             {
-                console.Display("Illegal command!");
+                this.console.Display("Illegal command!");
             }
         }
 
@@ -148,27 +170,6 @@
             Coords currCoords = numberCoords[0];
             numberCoords[0] = numberCoords[index];
             numberCoords[index] = currCoords;
-        }
-
-        public bool CheckNeighbours(Coords currCell, Coords cellToBeMoveTo)
-        {
-            bool cellsRowsMatch = (currCell.Row == cellToBeMoveTo.Row);
-            bool cellsColsMatch = (currCell.Col == cellToBeMoveTo.Col);
-            bool isLeftCell = (currCell.Col == cellToBeMoveTo.Col - 1);
-            bool isRightCell = (currCell.Col == cellToBeMoveTo.Col + 1);
-            bool isUpCell = (currCell.Row == cellToBeMoveTo.Row - 1);
-            bool isDownCell = (currCell.Row == cellToBeMoveTo.Row + 1);
-
-            if (cellsRowsMatch && (isLeftCell || isRightCell))
-            {
-                return true;
-            }
-            else if (cellsColsMatch && (isUpCell || isDownCell))
-            {
-                return true;
-            }
-
-            return false;
         }
     }
 }
