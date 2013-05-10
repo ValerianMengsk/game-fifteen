@@ -1,17 +1,34 @@
-﻿namespace GameFifteen
+﻿[module: System.Diagnostics.CodeAnalysis.SuppressMessage("StyleCop.CSharp.DocumentationRules", "*", Justification = "Reviewed. Suppression is OK here.")]
+
+namespace GameFifteen
 {
     using System;
     using System.Linq;
     using System.Text;
 
+    /// <summary>
+    /// Game manager that control anything (runs) in the game.
+    /// </summary>
     public class GameEngine
     {
-        // Singleton eager initialization.
+        /// <summary>
+        /// Singleton eager initialization.
+        /// </summary>
         private static GameEngine instance = new GameEngine();
 
+        /// <summary>
+        /// Field that holds the playfield in the game. 
+        /// </summary>
         private Field gameField = null;
+
+        /// <summary>
+        /// Field that holds the console to read and write to.
+        /// </summary>
         private IRenderer console = null;
 
+        /// <summary>
+        /// Prevents a default instance of the <see cref="GameEngine" /> class from being created.
+        /// </summary>
         private GameEngine()
         {
             this.console = new ConsoleRenderer();
@@ -26,11 +43,18 @@
             }
         }
 
+        /// <summary>
+        /// Method that gets the main instance of the game engine.
+        /// </summary>
+        /// <returns>The instance of the GameEngine.</returns>
         public static GameEngine GetInstace()
         {
             return instance;
         }
 
+        /// <summary>
+        /// Method that starts the new game, when it was just loaded or restarted. 
+        /// </summary>
         public void StartNewGame()
         {
             this.gameField = new Field();
@@ -46,6 +70,13 @@
             this.BeginGame();
         }
 
+        /// <summary>
+        /// Method that checks can the current sell be moved
+        /// to new play where the player wants it to.
+        /// </summary>
+        /// <param name="currCell">Sell to be moved.</param>
+        /// <param name="cellToBeMoveTo">New coordinates where the sell will be moved.</param>
+        /// <returns>Can be done this operation (true or false).</returns>
         public bool CheckNeighbours(Coords currCell, Coords cellToBeMoveTo)
         {
             bool cellsRowsMatch = currCell.Row == cellToBeMoveTo.Row;
@@ -67,6 +98,9 @@
             return false;
         }
 
+        /// <summary>
+        /// Compose the string that will be shown to the player when the game is started.
+        /// </summary>
         private void PrintStartupMessage()
         {
             StringBuilder startupMessage = new StringBuilder();
@@ -80,6 +114,10 @@
             this.console.Display(startupMessage.ToString());
         }
 
+        /// <summary>
+        /// Method that is responsible to when the game is started or restarted.
+        /// It does the things that are needed when the game is started.
+        /// </summary>
         private void BeginGame()
         {
             ScoreBoard scoreBoard = new ScoreBoard();
@@ -120,6 +158,12 @@
             }
         }
 
+        /// <summary>
+        /// Checks move to be valid.
+        /// If it is valid it makes it.
+        /// Otherwise it reports an error.
+        /// </summary>
+        /// <param name="inputNumber">String to be checked (after parsing).</param>
         private void MoveNumberIfValid(string inputNumber)
         {
             int numberToMove = -1;
@@ -137,6 +181,12 @@
             }
         }
 
+        /// <summary>
+        /// Method try to move.
+        /// If it is valid it makes it.
+        /// Otherwise it reports an error.
+        /// </summary>
+        /// <param name="index">Integer to be moved.</param>
         private void TryToMoveNumber(int index)
         {
             var currCell = this.gameField.NumberCoords[0];
@@ -163,6 +213,11 @@
             }
         }
 
+        /// <summary>
+        /// Method that swap coordinates from given integer.
+        /// Method used very often.
+        /// </summary>
+        /// <param name="index">Given integer.</param>
         private void SwapCoords(int index)
         {
             var numberCoords = this.gameField.NumberCoords;

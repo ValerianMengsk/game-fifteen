@@ -12,3 +12,5 @@ C:\Users\rosss\Documents\GitHub\game-fifteen\Game-Fifteen-6\bin\Debug\Game15.exe
 C:\Users\rosss\Documents\GitHub\game-fifteen\Game-Fifteen-6\bin\Debug\Game15.pdb
 C:\Users\rosss\Documents\GitHub\game-fifteen\Game-Fifteen-6\bin\Debug\PowerCollections.dll
 C:\Users\rosss\Documents\GitHub\game-fifteen\Game-Fifteen-6\obj\x86\Debug\Telerik.csprojResolveAssemblyReference.cache
+C:\Users\rosss\Documents\GitHub\game-fifteen\Game-Fifteen-6\bin\Debug\Game15.exe.CodeAnalysisLog.xml
+C:\Users\rosss\Documents\GitHub\game-fifteen\Game-Fifteen-6\bin\Debug\Game15.exe.lastcodeanalysissucceeded
