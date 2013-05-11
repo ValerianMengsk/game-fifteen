@@ -7,7 +7,7 @@ namespace GameFifteen
     using System.Text;
 
     /// <summary>
-    /// Game manager that control anything (runs) in the game.
+    /// Game manager that controls the game.
     /// </summary>
     public class GameEngine
     {
@@ -17,12 +17,12 @@ namespace GameFifteen
         private static GameEngine GameEngineInstance = new GameEngine();
 
         /// <summary>
-        /// Field that holds the playfield in the game. 
+        /// Field that holds the gamefield.
         /// </summary>
         private Field gameField = null;
 
         /// <summary>
-        /// Field that holds the console to read and write to.
+        /// Field that holds the console. It will handle input and output.
         /// </summary>
         private IRenderable console = null;
 
@@ -32,12 +32,14 @@ namespace GameFifteen
         private const int DownBound = 0;
 
         /// <summary>
-        /// Constant for down bound of the field.
+        /// Constant for up bound of the field.
         /// </summary>
         private const int UpBound = 16;
 
         /// <summary>
         /// Prevents a default instance of the <see cref="GameEngine" /> class from being created.
+        /// Part of Singleton.
+        /// Starts the game if there are no errors.
         /// </summary>
         private GameEngine()
         {
@@ -79,12 +81,11 @@ namespace GameFifteen
         }
 
         /// <summary>
-        /// Method that checks can the current sell be moved
-        /// to new play where the player wants it to.
+        /// Method that checks if the current cell can be moved to new position.
         /// </summary>
         /// <param name="currCell">Sell to be moved.</param>
         /// <param name="cellToBeMoveTo">New coordinates where the sell will be moved.</param>
-        /// <returns>Can be done this operation (true or false).</returns>
+        /// <returns>Retruns true if the operation is valid and false otherwise.</returns>
         public bool CheckNeighbours(Coords currCell, Coords cellToBeMoveTo)
         {
             bool cellsRowsMatch = currCell.Row == cellToBeMoveTo.Row;
@@ -107,8 +108,8 @@ namespace GameFifteen
         }
 
         /// <summary>
-        /// Method that is responsible to when the game is started or restarted.
-        /// It does the things that are needed when the game is started.
+        /// Method that is responsible for communication between the user and the engine.
+        /// Handles user input and outputs game response.
         /// </summary>
         private void BeginGame()
         {
@@ -154,11 +155,11 @@ namespace GameFifteen
         }
 
         /// <summary>
-        /// Checks move to be valid.
-        /// If it is valid it makes it.
+        /// Checks if the move is valid.
+        /// If it is, moves the number.
         /// Otherwise it reports an error.
         /// </summary>
-        /// <param name="inputNumber">String to be checked (after parsing).</param>
+        /// <param name="inputNumber">Number to be moved.</param>
         private void MoveNumberIfValid(string inputNumber)
         {
             int numberToMove = -1;
@@ -173,11 +174,12 @@ namespace GameFifteen
         }
 
         /// <summary>
-        /// Method try to move.
-        /// If it is valid it makes it.
-        /// Otherwise it reports an error.
+        /// Validates the passed index.
+        /// If it's valid moves the number and returns true. 
+        /// If it isn't returns false.
         /// </summary>
-        /// <param name="index">Integer to be moved.</param>
+        /// <param name="index">Number index in numbers coords.</param>
+        /// <returns>True if the number is moved and false otherwise.</returns>
         private bool IsNumberMoved(int index)
         {
             bool inRange = (index > DownBound) && (index < UpBound);
@@ -248,8 +250,7 @@ namespace GameFifteen
         }
 
         /// <summary>
-        /// Method that swap coordinates from given integer.
-        /// Method used very often.
+        /// Method that swaps coordinates from given integer.
         /// </summary>
         /// <param name="index">Given integer.</param>
         private void SwapCoords(int index)

@@ -11,7 +11,7 @@ namespace GameFifteen
     public class ConsoleRenderer : IRenderable
     {
         /// <summary>
-        /// Display string text to the console.
+        /// Display string on the console.
         /// </summary>
         /// <param name="toDisplay">String that will be printed on the console.</param>
         public void Display(string toDisplay)
@@ -20,11 +20,11 @@ namespace GameFifteen
         }
 
         /// <summary>
-        /// Show message on the console telling the user what we expect to ne entered.
-        /// Reading from the console.
+        /// Show message on the console telling the user what we expect him to entere.
+        /// Reading the user input.
         /// </summary>
-        /// <param name="message">Message to be printed before asking for a variable.</param>
-        /// <returns>Entered string from the user on the console.</returns>
+        /// <param name="message">Message to be printed when asking for input.</param>
+        /// <returns>Input data.</returns>
         public string Read(string message)
         {
             Console.Write(message);

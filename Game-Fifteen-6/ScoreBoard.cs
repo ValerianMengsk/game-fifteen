@@ -8,18 +8,17 @@ namespace GameFifteen
     using Wintellect.PowerCollections;
 
     /// <summary>
-    /// Class that deals with scores, best players, etc.
+    /// Class that deals with scores and ranking.
     /// </summary>
     public class ScoreBoard
     {
         /// <summary>
-        /// OrderedMultiDictionary that keeps scores of past players.
+        /// OrderedMultiDictionary that keeps scores of the players.
         /// </summary>
         private OrderedMultiDictionary<int, string> scoreBoard;
 
         /// <summary>
-        /// The console the game will deal with.
-        /// The abstraction is increased by IRender interface.
+        /// Controler which will handle the input an output.
         /// </summary>
         private IRenderable console = null;
 
@@ -33,8 +32,7 @@ namespace GameFifteen
         }
 
         /// <summary>
-        /// Method that add a score to the score board.
-        /// Adds integer number that is the score.
+        /// Method that adds a user to the score board.
         /// </summary>
         /// <param name="score">The score.</param>
         public void Add(int score)
@@ -47,9 +45,9 @@ namespace GameFifteen
         }
 
         /// <summary>
-        /// Makes string that contains all added scores.
+        /// Makes string that represents the score board.
         /// </summary>
-        /// <returns>String of the results (human readable form).</returns>
+        /// <returns>Score board as string.</returns>
         public override string ToString()
         {
             StringBuilder scoreBoardAsString = new StringBuilder();

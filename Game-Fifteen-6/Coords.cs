@@ -7,22 +7,22 @@ namespace GameFifteen
 
     /// <summary>
     /// Class for defining the coordinates in the playfield.
-    /// It contains rows, columns, etc.
+    /// It contains rows, columns, field dimensions etc.
     /// </summary>
     public class Coords
     {
         /// <summary>
-        /// Constant that hold number for dimensions.
+        /// Constant that hold number of dimensions as rows and cols.
         /// </summary>
         private const int Dimensions = 4;
 
         /// <summary>
-        /// Field that hold a number initializing rows.
+        /// Field that represents rows.
         /// </summary>
         private int row;
 
         /// <summary>
-        /// Field that hold a number initializing columns.
+        /// Field that represents columns.
         /// </summary>
         private int col;
 
@@ -39,9 +39,9 @@ namespace GameFifteen
         }
 
         /// <summary>
-        /// Gets row, encapsulating it.
+        /// Gets row and sets row, validating it.
         /// </summary>
-        /// <value>Property for row.</value>
+        /// <value>Value for row.</value>
         public int Row
         {
             get
@@ -58,7 +58,7 @@ namespace GameFifteen
         }
 
         /// <summary>
-        /// Gets col, encapsulating it.
+        /// Gets col, and sets col, validating it.
         /// </summary>
         /// <value>Property for col.</value>
         public int Col
@@ -77,7 +77,7 @@ namespace GameFifteen
         }
 
         /// <summary>
-        /// Checks the range, if it is out of range, throws an exception.
+        /// Checks the range, if it's out of range, throws an exception.
         /// </summary>
         /// <param name="dimension">Integer number that sets the up range.</param>
         public void CheckIfIsInRange(int dimension)

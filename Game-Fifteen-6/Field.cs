@@ -8,7 +8,7 @@ namespace GameFifteen
     using System.Text;
 
     /// <summary>
-    /// Class that works on the playfield.
+    /// Class that represents the playfield.
     /// </summary>
     public class Field
     {
@@ -18,18 +18,18 @@ namespace GameFifteen
         private const int Dimesions = 4;
 
         /// <summary>
-        /// Field that keep the values for the playfield's sells.
+        /// Place to keep the playfield.
         /// </summary>
         private int[,] field;
 
         /// <summary>
-        /// Field that keeps a dictionary list for the number and its current coordinates.
+        /// Field that keeps a dictionary list for the numbers and their coordinates.
         /// </summary>
         private Dictionary<int, Coords> numberCoords;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="Field" /> class.
-        /// Constructor that sets initial field.
+        /// Constructor that initializes and fills the field with numbers.
         /// </summary>
         public Field()
         {
@@ -39,10 +39,10 @@ namespace GameFifteen
         }
 
         /// <summary>
-        /// Gets and sets, encapsulating field.
+        /// Gets and sets field.
         /// </summary>
         /// <value>
-        /// Gets and sets field.
+        /// Gets and sets value for numbers coordinates.
         /// </value>
         public Dictionary<int, Coords> NumberCoords
         {
@@ -60,9 +60,9 @@ namespace GameFifteen
         /// <summary>
         /// Indexer for the class that set a sell be rows and columns.
         /// </summary>
-        /// <param name="row">Set the row.</param>
-        /// <param name="col">Set the column.</param>
-        /// <returns>The value in the indexed sell.</returns>
+        /// <param name="row">row index.</param>
+        /// <param name="col">column index.</param>
+        /// <returns>The value in the sell at current position in the field.</returns>
         public int this[int row, int col]
         {
             get 
@@ -81,7 +81,7 @@ namespace GameFifteen
         }
 
         /// <summary>
-        /// Check if the quest is solved.
+        /// Check if the field is solved.
         /// </summary>
         /// <returns>Returns true or false.</returns>
         public bool IsSolved()
@@ -117,7 +117,7 @@ namespace GameFifteen
         }
 
         /// <summary>
-        /// Gets the sell from the playfield (random).
+        /// Gets playfield filled with mixed numbers form 0 to 15.
         /// </summary>
         public void GetRandomField()
         {
@@ -139,9 +139,9 @@ namespace GameFifteen
         }
 
         /// <summary>
-        /// Draws the picture of the field in some way for fancy looking.
+        /// Generates string representation of the field.
         /// </summary>
-        /// <returns>A multiline string of the field.</returns>
+        /// <returns>String representation of the field.</returns>
         public override string ToString()
         {
             StringBuilder fieldAsString = new StringBuilder();
@@ -173,7 +173,7 @@ namespace GameFifteen
         /// Checks if integer number is in range of the field.
         /// </summary>
         /// <param name="dimension">Integer number to be checked.</param>
-        /// <returns>Gives true or false is the number is in range.</returns>
+        /// <returns>Returns true if number is in range or false if it's not.</returns>
         private bool IsInRange(int dimension)
         {
             if (dimension < 0 || dimension >= Dimesions)
@@ -185,11 +185,10 @@ namespace GameFifteen
         }
 
         /// <summary>
-        /// Validate all parameters used in the coordinate a once.
-        /// Check both (row and column) are in the range of the playfield.
+        /// Checks if row and column are in the range of the playfield.
         /// </summary>
-        /// <param name="row">The given number for row.</param>
-        /// <param name="col">The given number for column.</param>
+        /// <param name="row">Integer value for row.</param>
+        /// <param name="col">Integer value for column.</param>
         private void ValidateDimensions(int row, int col)
         {
             if (!this.IsInRange(row) || !this.IsInRange(col))

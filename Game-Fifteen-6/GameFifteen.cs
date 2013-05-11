@@ -7,12 +7,12 @@ namespace GameFifteen
 
     /// <summary>
     /// Main class of the game, includes Main() Method.
-    /// Just start the game and the game engine.
+    /// Just starts the game through the game engine.
     /// </summary>
     public class GameFifteen
     {
         /// <summary>
-        /// Main Method than start the game and the game manager.
+        /// Main Method than starts the game.
         /// </summary>
         public static void Main()
         {
