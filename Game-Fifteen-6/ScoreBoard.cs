@@ -21,7 +21,7 @@ namespace GameFifteen
         /// The console the game will deal with.
         /// The abstraction is increased by IRender interface.
         /// </summary>
-        private IRenderer console = null;
+        private IRenderable console = null;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="ScoreBoard" /> class.

@@ -6,3 +6,13 @@ C:\Users\rosss\Documents\GitHub\game-fifteen\GameFifteenTests\bin\Debug\Game15.p
 C:\Users\rosss\Documents\GitHub\game-fifteen\GameFifteenTests\obj\Debug\GameFifteenTests.csprojResolveAssemblyReference.cache
 C:\Users\rosss\Documents\GitHub\game-fifteen\GameFifteenTests\obj\Debug\GameFifteenTests.dll
 C:\Users\rosss\Documents\GitHub\game-fifteen\GameFifteenTests\obj\Debug\GameFifteenTests.pdb
+D:\others\GitHub\Test\Uni HW\game-fifteen\GameFifteenTests\obj\Debug\GameFifteenTests.csprojResolveAssemblyReference.cache
+D:\others\GitHub\Test\Uni HW\game-fifteen\GameFifteenTests\obj\Debug\GameFifteenTests.dll
+D:\others\GitHub\Test\Uni HW\game-fifteen\GameFifteenTests\bin\Debug\GameFifteenTests.dll
+D:\others\GitHub\Test\Uni HW\game-fifteen\GameFifteenTests\bin\Debug\GameFifteenTests.pdb
+D:\others\GitHub\Test\Uni HW\game-fifteen\GameFifteenTests\bin\Debug\Game15.exe
+D:\others\GitHub\Test\Uni HW\game-fifteen\GameFifteenTests\bin\Debug\GameFifteenUI.dll
+D:\others\GitHub\Test\Uni HW\game-fifteen\GameFifteenTests\bin\Debug\PowerCollections.dll
+D:\others\GitHub\Test\Uni HW\game-fifteen\GameFifteenTests\bin\Debug\Game15.pdb
+D:\others\GitHub\Test\Uni HW\game-fifteen\GameFifteenTests\bin\Debug\GameFifteenUI.pdb
+D:\others\GitHub\Test\Uni HW\game-fifteen\GameFifteenTests\obj\Debug\GameFifteenTests.pdb

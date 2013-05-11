@@ -16,7 +16,7 @@ namespace GameFifteen
         /// </summary>
         public static void Main()
         {
-            GameEngine engine = GameEngine.GetInstace();
+            GameEngine.StartGame();
         }
     }
 }

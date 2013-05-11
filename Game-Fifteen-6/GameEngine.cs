@@ -14,7 +14,7 @@ namespace GameFifteen
         /// <summary>
         /// Singleton eager initialization.
         /// </summary>
-        private static GameEngine instance = new GameEngine();
+        private static GameEngine GameEngineInstance = new GameEngine();
 
         /// <summary>
         /// Field that holds the playfield in the game. 
@@ -24,7 +24,17 @@ namespace GameFifteen
         /// <summary>
         /// Field that holds the console to read and write to.
         /// </summary>
-        private IRenderer console = null;
+        private IRenderable console = null;
+
+        /// <summary>
+        /// Constant for down bound of the field.
+        /// </summary>
+        private const int DownBound = 0;
+
+        /// <summary>
+        /// Constant for down bound of the field.
+        /// </summary>
+        private const int UpBound = 16;
 
         /// <summary>
         /// Prevents a default instance of the <see cref="GameEngine" /> class from being created.
@@ -47,9 +57,9 @@ namespace GameFifteen
         /// Method that gets the main instance of the game engine.
         /// </summary>
         /// <returns>The instance of the GameEngine.</returns>
-        public static GameEngine GetInstace()
+        public static GameEngine StartGame()
         {
-            return instance;
+            return GameEngineInstance;
         }
 
         /// <summary>
@@ -64,8 +74,6 @@ namespace GameFifteen
                 this.gameField.GetRandomField();
             } 
             while (this.gameField.IsSolved());
-
-            this.PrintStartupMessage();
 
             this.BeginGame();
         }
@@ -99,27 +107,14 @@ namespace GameFifteen
         }
 
         /// <summary>
-        /// Compose the string that will be shown to the player when the game is started.
-        /// </summary>
-        private void PrintStartupMessage()
-        {
-            StringBuilder startupMessage = new StringBuilder();
-
-            startupMessage.AppendLine("\r\nWelcome to the game “15”.");
-            startupMessage.AppendLine("Please try to arrange the numbers sequentially.");
-            startupMessage.AppendLine("Use 'top' to view the top scoreboard.");
-            startupMessage.AppendLine("Use 'restart' to start a new game.");
-            startupMessage.AppendLine("Use 'exit' to quit the game.");
-
-            this.console.Display(startupMessage.ToString());
-        }
-
-        /// <summary>
         /// Method that is responsible to when the game is started or restarted.
         /// It does the things that are needed when the game is started.
         /// </summary>
         private void BeginGame()
         {
+            string startUpMessage = this.ComposeStartupMessage();
+            this.console.Display(startUpMessage);
+
             ScoreBoard scoreBoard = new ScoreBoard();
 
             this.console.Display(this.gameField.ToString());
@@ -168,14 +163,10 @@ namespace GameFifteen
         {
             int numberToMove = -1;
             int.TryParse(inputNumber, out numberToMove);
-            int downBound = 0;
-            int bound = 16;
+            
+            bool isNumberMoved = this.IsNumberMoved(numberToMove);
 
-            if (numberToMove > downBound && numberToMove < bound)
-            {
-                this.TryToMoveNumber(numberToMove);
-            }
-            else
+            if (!isNumberMoved)
             {
                 this.console.Display("Illegal command!");
             }
@@ -187,30 +178,73 @@ namespace GameFifteen
         /// Otherwise it reports an error.
         /// </summary>
         /// <param name="index">Integer to be moved.</param>
-        private void TryToMoveNumber(int index)
+        private bool IsNumberMoved(int index)
         {
-            var currCell = this.gameField.NumberCoords[0];
-            var cellToBeMoveTo = this.gameField.NumberCoords[index];
-            bool validNaighbours = this.CheckNeighbours(currCell, cellToBeMoveTo);
+            bool inRange = (index > DownBound) && (index < UpBound);
+            bool numberMoved = true;
 
-            if (validNaighbours)
+            if (inRange)
             {
-                this.SwapCoords(index);
+                var currCell = this.gameField.NumberCoords[0];
+                var cellToBeMoveTo = this.gameField.NumberCoords[index];
+                bool validNaighbours = this.CheckNeighbours(currCell, cellToBeMoveTo);
 
-                var row = this.gameField.NumberCoords[index].Row;
-                var col = this.gameField.NumberCoords[index].Col;
-
-                this.gameField[row, col] = index;
-
-                row = this.gameField.NumberCoords[0].Row;
-                col = this.gameField.NumberCoords[0].Col;
-
-                this.gameField[row, col] = 0;
+                if (validNaighbours)
+                {
+                    MoveNumber(index);
+                }
+                else
+                {
+                    numberMoved = false;
+                }
             }
             else
             {
-                this.console.Display("Illegal command!");
+                numberMoved = false;
             }
+
+            return numberMoved;
+        }
+
+        /// <summary>
+        /// This method moves a number from one position to another.
+        /// </summary>
+        /// <param name="index">Integer to use for moving a number.</param>
+        private void MoveNumber(int index)
+        {
+            // Just in case validation.
+            if (index < DownBound || index > UpBound)
+            {
+                throw new ArgumentOutOfRangeException("Index is not in correct range. The range is between 0 and 16.");
+            }
+
+            this.SwapCoords(index);
+
+            var row = this.gameField.NumberCoords[index].Row;
+            var col = this.gameField.NumberCoords[index].Col;
+
+            this.gameField[row, col] = index;
+
+            row = this.gameField.NumberCoords[0].Row;
+            col = this.gameField.NumberCoords[0].Col;
+
+            this.gameField[row, col] = 0;
+        }
+
+        /// <summary>
+        /// Compose the string that will be shown to the player when the game is started.
+        /// </summary>
+        private string ComposeStartupMessage()
+        {
+            StringBuilder startupMessage = new StringBuilder();
+
+            startupMessage.AppendLine("\r\nWelcome to the game “15”.");
+            startupMessage.AppendLine("Please try to arrange the numbers sequentially.");
+            startupMessage.AppendLine("Use 'top' to view the top scoreboard.");
+            startupMessage.AppendLine("Use 'restart' to start a new game.");
+            startupMessage.AppendLine("Use 'exit' to quit the game.");
+
+            return startupMessage.ToString();
         }
 
         /// <summary>

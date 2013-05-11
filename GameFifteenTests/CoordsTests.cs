@@ -30,13 +30,5 @@ namespace GameFifteenTests
             Coords coordinates = new Coords(0, 0);
             coordinates.CheckIfIsInRange(-1);
         }
-
-        [TestMethod]
-        public void CheckRangeExceptionNotWated()
-        {
-            Coords coordinates = new Coords(0, 0);
-            Assert.AreEqual()
-            
-        }
     }
 }
