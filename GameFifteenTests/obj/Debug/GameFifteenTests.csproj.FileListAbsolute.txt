@@ -1,0 +1,8 @@
+C:\Users\rosss\Documents\GitHub\game-fifteen\GameFifteenTests\bin\Debug\GameFifteenTests.dll
+C:\Users\rosss\Documents\GitHub\game-fifteen\GameFifteenTests\bin\Debug\GameFifteenTests.pdb
+C:\Users\rosss\Documents\GitHub\game-fifteen\GameFifteenTests\bin\Debug\Game15.exe
+C:\Users\rosss\Documents\GitHub\game-fifteen\GameFifteenTests\bin\Debug\PowerCollections.dll
+C:\Users\rosss\Documents\GitHub\game-fifteen\GameFifteenTests\bin\Debug\Game15.pdb
+C:\Users\rosss\Documents\GitHub\game-fifteen\GameFifteenTests\obj\Debug\GameFifteenTests.csprojResolveAssemblyReference.cache
+C:\Users\rosss\Documents\GitHub\game-fifteen\GameFifteenTests\obj\Debug\GameFifteenTests.dll
+C:\Users\rosss\Documents\GitHub\game-fifteen\GameFifteenTests\obj\Debug\GameFifteenTests.pdb

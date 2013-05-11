@@ -80,7 +80,7 @@ namespace GameFifteen
         /// Checks the range, if it is out of range, throws an exception.
         /// </summary>
         /// <param name="dimension">Integer number that sets the up range.</param>
-        private void CheckIfIsInRange(int dimension)
+        public void CheckIfIsInRange(int dimension)
         {
             if (dimension < 0 || dimension >= Dimensions)
             {
