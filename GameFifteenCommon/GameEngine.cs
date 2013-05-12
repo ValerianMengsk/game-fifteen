@@ -12,6 +12,21 @@ namespace GameFifteen
     public class GameEngine
     {
         /// <summary>
+        /// Constant for down bound of the field.
+        /// </summary>
+        private const int DownBound = 0;
+
+        /// <summary>
+        /// Constant for up bound of the field.
+        /// </summary>
+        private const int UpBound = 16;
+
+        /// <summary>
+        /// Constant for the field dimentions.
+        /// </summary>
+        private const int Dimentions = 4;
+
+        /// <summary>
         /// Singleton eager initialization.
         /// </summary>
         private static GameEngine GameEngineInstance = new GameEngine();
@@ -25,16 +40,6 @@ namespace GameFifteen
         /// Field that holds the console. It will handle input and output.
         /// </summary>
         private IRenderable console = null;
-
-        /// <summary>
-        /// Constant for down bound of the field.
-        /// </summary>
-        private const int DownBound = 0;
-
-        /// <summary>
-        /// Constant for up bound of the field.
-        /// </summary>
-        private const int UpBound = 16;
 
         /// <summary>
         /// Prevents a default instance of the <see cref="GameEngine" /> class from being created.
@@ -69,7 +74,7 @@ namespace GameFifteen
         /// </summary>
         public void StartNewGame()
         {
-            this.gameField = new Field();
+            this.gameField = new Field(Dimentions);
 
             do
             {
@@ -193,7 +198,7 @@ namespace GameFifteen
 
                 if (validNaighbours)
                 {
-                    MoveNumber(index);
+                    this.MoveNumber(index);
                 }
                 else
                 {

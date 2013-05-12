@@ -13,9 +13,9 @@ namespace GameFifteen
     public class Field
     {
         /// <summary>
-        /// Sets constant for the range of the playfield.
+        /// Readonly field, holding field dimentions.
         /// </summary>
-        private const int Dimesions = 4;
+        private readonly int Dimentions;
 
         /// <summary>
         /// Place to keep the playfield.
@@ -31,9 +31,10 @@ namespace GameFifteen
         /// Initializes a new instance of the <see cref="Field" /> class.
         /// Constructor that initializes and fills the field with numbers.
         /// </summary>
-        public Field()
+        public Field(int dimentions)
         {
-            this.field = new int[Dimesions, Dimesions];
+            this.Dimentions = dimentions;
+            this.field = new int[this.Dimentions, this.Dimentions];
             this.numberCoords = new Dictionary<int, Coords>();
             this.GetRandomField();
         }
@@ -132,7 +133,7 @@ namespace GameFifteen
                 {
                     int index = randomIndex.Next(0, numbers.Count);
                     this.field[row, col] = numbers[index];
-                    this.numberCoords.Add(numbers[index], new Coords(row, col));
+                    this.numberCoords.Add(numbers[index], new Coords(row, col, this.Dimentions));
                     numbers.RemoveAt(index);
                 }
             }
@@ -176,7 +177,7 @@ namespace GameFifteen
         /// <returns>Returns true if number is in range or false if it's not.</returns>
         private bool IsInRange(int dimension)
         {
-            if (dimension < 0 || dimension >= Dimesions)
+            if (dimension < 0 || dimension >= this.Dimentions)
             {
                 return false;
             }

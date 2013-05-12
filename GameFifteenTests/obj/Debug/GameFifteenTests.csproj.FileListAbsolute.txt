@@ -16,3 +16,5 @@ D:\others\GitHub\Test\Uni HW\game-fifteen\GameFifteenTests\bin\Debug\PowerCollec
 D:\others\GitHub\Test\Uni HW\game-fifteen\GameFifteenTests\bin\Debug\Game15.pdb
 D:\others\GitHub\Test\Uni HW\game-fifteen\GameFifteenTests\bin\Debug\GameFifteenUI.pdb
 D:\others\GitHub\Test\Uni HW\game-fifteen\GameFifteenTests\obj\Debug\GameFifteenTests.pdb
+D:\others\GitHub\Test\Uni HW\game-fifteen\GameFifteenTests\bin\Debug\GameFifteenCommon.dll
+D:\others\GitHub\Test\Uni HW\game-fifteen\GameFifteenTests\bin\Debug\GameFifteenCommon.pdb

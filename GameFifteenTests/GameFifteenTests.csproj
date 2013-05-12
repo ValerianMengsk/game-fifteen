@@ -61,6 +61,17 @@
       <Project>{7c3aae3f-4dd4-482c-849f-6091b0992b02}</Project>
       <Name>GameFifteen</Name>
     </ProjectReference>
+    <ProjectReference Include="..\GameFifteenCommon\GameFifteenCommon.csproj">
+      <Project>{d01d4d6d-1737-42ff-8688-9129cbcdb17f}</Project>
+      <Name>GameFifteenCommon</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GameFifteenUI\GameFifteenUI.csproj">
+      <Project>{08643f17-d1bd-499b-9b7d-9c6138775998}</Project>
+      <Name>GameFifteenUI</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

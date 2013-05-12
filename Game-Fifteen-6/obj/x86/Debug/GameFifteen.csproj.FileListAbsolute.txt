@@ -11,5 +11,6 @@ D:\others\GitHub\Test\Uni HW\game-fifteen\Game-Fifteen-6\bin\Debug\Game15.exe.co
 D:\others\GitHub\Test\Uni HW\game-fifteen\Game-Fifteen-6\bin\Debug\Game15.exe
 D:\others\GitHub\Test\Uni HW\game-fifteen\Game-Fifteen-6\bin\Debug\Game15.pdb
 D:\others\GitHub\Test\Uni HW\game-fifteen\Game-Fifteen-6\bin\Debug\GameFifteenUI.dll
-D:\others\GitHub\Test\Uni HW\game-fifteen\Game-Fifteen-6\bin\Debug\PowerCollections.dll
 D:\others\GitHub\Test\Uni HW\game-fifteen\Game-Fifteen-6\bin\Debug\GameFifteenUI.pdb
+D:\others\GitHub\Test\Uni HW\game-fifteen\Game-Fifteen-6\bin\Debug\GameFifteenCommon.dll
+D:\others\GitHub\Test\Uni HW\game-fifteen\Game-Fifteen-6\bin\Debug\GameFifteenCommon.pdb

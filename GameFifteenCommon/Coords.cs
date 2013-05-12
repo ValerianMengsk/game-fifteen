@@ -14,7 +14,7 @@ namespace GameFifteen
         /// <summary>
         /// Constant that hold number of dimensions as rows and cols.
         /// </summary>
-        private const int Dimensions = 4;
+        private readonly int Dimensions;
 
         /// <summary>
         /// Field that represents rows.
@@ -32,8 +32,9 @@ namespace GameFifteen
         /// </summary>
         /// <param name="row">Given row.</param>
         /// <param name="col">Given column.</param>
-        public Coords(int row, int col)
+        public Coords(int row, int col, int dimensions)
         {
+            this.Dimensions = dimensions;
             this.Row = row;
             this.Col = col;
         }
@@ -82,7 +83,7 @@ namespace GameFifteen
         /// <param name="dimension">Integer number that sets the up range.</param>
         public void CheckIfIsInRange(int dimension)
         {
-            if (dimension < 0 || dimension >= Dimensions)
+            if (dimension < 0 || dimension >= this.Dimensions)
             {
                 throw new ArgumentOutOfRangeException("The value you entered for col is either too big or too small!");
             }
