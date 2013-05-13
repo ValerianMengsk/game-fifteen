@@ -8,27 +8,40 @@ namespace GameFifteenTests
     public class CoordsTests
     {
         [TestMethod]
-        [ExpectedException(typeof(ArgumentOutOfRangeException))] 
-        public void CheckRangeExceptionWithBorderValue()
+        public void CoordsTestZero()
         {
-            Coords coordinates = new Coords(0, 0);
-            coordinates.CheckIfIsInRange(4);
+            Coords coords = new Coords(0, 0, 1);
+
+            Assert.AreEqual(0, coords.Row);
+            Assert.AreEqual(0, coords.Col);
         }
 
         [TestMethod]
         [ExpectedException(typeof(ArgumentOutOfRangeException))]
-        public void CheckRangeExceptionWithBigNumber()
+        public void CoordsTestNegativeRow()
         {
-            Coords coordinates = new Coords(0, 0);
-            coordinates.CheckIfIsInRange(10000000);
+            Coords coords = new Coords(-1, 0, 1);
         }
 
         [TestMethod]
         [ExpectedException(typeof(ArgumentOutOfRangeException))]
-        public void CheckRangeExceptionWithNegative()
+        public void CoordsTestNegativeCol()
         {
-            Coords coordinates = new Coords(0, 0);
-            coordinates.CheckIfIsInRange(-1);
+            Coords coords = new Coords(1, -1, 1);
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentOutOfRangeException))]
+        public void CoordsTestNegativeDimentions()
+        {
+            Coords coords = new Coords(1, 1, -1);
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentOutOfRangeException))]
+        public void CoordsTestTooBigRowAndCol()
+        {
+            Coords coords = new Coords(10099, 132454, 4);
         }
     }
 }

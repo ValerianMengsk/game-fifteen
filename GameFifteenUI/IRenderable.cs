@@ -8,7 +8,7 @@ namespace GameFifteen
     /// <summary>
     /// Interface, handling input and output.
     /// </summary>
-    public interface IRenderable
+    public interface IRenderer
     {
         /// <summary>
         /// Method, handling output.

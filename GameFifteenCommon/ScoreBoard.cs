@@ -20,7 +20,7 @@ namespace GameFifteen
         /// <summary>
         /// Controler which will handle the input an output.
         /// </summary>
-        private IRenderable console = null;
+        private IRenderer console = null;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="ScoreBoard" /> class.

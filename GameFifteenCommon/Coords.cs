@@ -12,9 +12,9 @@ namespace GameFifteen
     public class Coords
     {
         /// <summary>
-        /// Constant that hold number of dimensions as rows and cols.
+        /// Field that holds number of dimensions as rows and cols.
         /// </summary>
-        private readonly int Dimensions;
+        private int dimensions;
 
         /// <summary>
         /// Field that represents rows.
@@ -34,7 +34,12 @@ namespace GameFifteen
         /// <param name="col">Given column.</param>
         public Coords(int row, int col, int dimensions)
         {
-            this.Dimensions = dimensions;
+            if (this.dimensions < 0)
+            {
+                throw new ArgumentOutOfRangeException("Dimentions can not be negative!");
+            }
+
+            this.dimensions = dimensions;
             this.Row = row;
             this.Col = col;
         }
@@ -81,9 +86,9 @@ namespace GameFifteen
         /// Checks the range, if it's out of range, throws an exception.
         /// </summary>
         /// <param name="dimension">Integer number that sets the up range.</param>
-        public void CheckIfIsInRange(int dimension)
+        private void CheckIfIsInRange(int dimension)
         {
-            if (dimension < 0 || dimension >= this.Dimensions)
+            if (dimension < 0 || dimension >= this.dimensions)
             {
                 throw new ArgumentOutOfRangeException("The value you entered for col is either too big or too small!");
             }

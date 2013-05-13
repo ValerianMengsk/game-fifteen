@@ -39,7 +39,7 @@ namespace GameFifteen
         /// <summary>
         /// Field that holds the console. It will handle input and output.
         /// </summary>
-        private IRenderable console = null;
+        private IRenderer console = null;
 
         /// <summary>
         /// Prevents a default instance of the <see cref="GameEngine" /> class from being created.
@@ -72,7 +72,7 @@ namespace GameFifteen
         /// <summary>
         /// Method that starts the new game, when it was just loaded or restarted. 
         /// </summary>
-        public void StartNewGame()
+        private void StartNewGame()
         {
             this.gameField = new Field(Dimentions);
 
@@ -91,7 +91,7 @@ namespace GameFifteen
         /// <param name="currCell">Sell to be moved.</param>
         /// <param name="cellToBeMoveTo">New coordinates where the sell will be moved.</param>
         /// <returns>Retruns true if the operation is valid and false otherwise.</returns>
-        public bool CheckNeighbours(Coords currCell, Coords cellToBeMoveTo)
+        private bool CheckNeighbours(Coords currCell, Coords cellToBeMoveTo)
         {
             bool cellsRowsMatch = currCell.Row == cellToBeMoveTo.Row;
             bool cellsColsMatch = currCell.Col == cellToBeMoveTo.Col;
