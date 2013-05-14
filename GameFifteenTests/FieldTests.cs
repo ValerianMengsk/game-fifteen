@@ -71,6 +71,18 @@ namespace GameFifteenTests
         }
 
         [TestMethod]
+        public void FieldGetNumberTest()
+        {
+            Field GameField = new Field(4);
+
+            var number = GameField[0, 0];
+
+            bool isValidNumber = number >= 0 && number < 16;
+
+            Assert.IsTrue(isValidNumber);
+        }
+
+        [TestMethod]
         [ExpectedException(typeof(ArgumentOutOfRangeException))]
         public void FieldInvalidDimentionsTest()
         {

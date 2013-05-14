@@ -35,12 +35,22 @@ namespace GameFifteen
         /// Method that adds a user to the score board.
         /// </summary>
         /// <param name="score">The score.</param>
-        public void Add(int score)
+        public void Add(string name, int score)
         {
-            string message = string.Format("Congratulations! You won the game in {0} moves.", score);
-            this.console.Display(message);
+            if (name == null)
+            {
+                throw new ArgumentNullException("The name can not be null!");
+            }
+            else if (name == string.Empty)
+            {
+                name = "Anonymous";
+            }
 
-            string name = this.console.Read("Please enter your name for the top scoreboard: ");
+            if (score < 0)
+            {
+                throw new ArgumentOutOfRangeException("Score can not be negative!");
+            }
+
             this.scoreBoard.Add(score, name);
         }
 
@@ -70,7 +80,7 @@ namespace GameFifteen
                     var userName = user.Value;
                     var userScore = user.Key;
 
-                    scoreBoardAsString.AppendFormat("{0}. {1} --> {2} moves", position, userName, userScore);
+                    scoreBoardAsString.AppendFormat("{0}. {1} --> {2} moves\r\n", position, userName, userScore);
                     position++;
                 }
             }

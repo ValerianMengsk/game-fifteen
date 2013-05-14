@@ -120,10 +120,9 @@ namespace GameFifteen
         {
             string startUpMessage = this.ComposeStartupMessage();
             this.console.Display(startUpMessage);
+            this.console.Display(this.gameField.ToString());
 
             ScoreBoard scoreBoard = new ScoreBoard();
-
-            this.console.Display(this.gameField.ToString());
 
             string inputCommand = this.console.Read("Enter a number to move: ");
             bool gameIsFinished = false;
@@ -150,13 +149,25 @@ namespace GameFifteen
 
                 if (gameIsFinished)
                 {
-                    scoreBoard.Add(moves);
+                    string message = string.Format("Congratulations! You won the game in {0} moves.", moves);
+                    this.console.Display(message);
+
+                    this.AddUserToScoreBoard(scoreBoard, moves);
                     moves = 0;
                     this.StartNewGame();
                 }
 
                 inputCommand = this.console.Read("Enter a number to move: ");
             }
+        }
+
+        /// <summary>
+        /// Adds user to score board.
+        /// </summary>
+        private void AddUserToScoreBoard(ScoreBoard scoreBoard, int score)
+        {
+            string name = this.console.Read("Please enter your name for the top scoreboard: ");
+            scoreBoard.Add(name, score);
         }
 
         /// <summary>
