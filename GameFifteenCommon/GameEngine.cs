@@ -125,14 +125,14 @@ namespace GameFifteen
 
             this.console.Display(this.gameField.ToString());
 
-            string inputNumber = this.console.Read("Enter a number to move: ");
+            string inputCommand = this.console.Read("Enter a number to move: ");
             bool gameIsFinished = false;
             int moves = 0;
 
-            while (inputNumber != "exit")
+            while (inputCommand.Trim() != "exit")
             {
                 moves++;
-                switch (inputNumber)
+                switch (inputCommand)
                 {
                     case "top":
                         this.console.Display(scoreBoard.ToString());
@@ -141,7 +141,7 @@ namespace GameFifteen
                         this.StartNewGame();
                         break;
                     default:
-                        this.MoveNumberIfValid(inputNumber);
+                        this.MoveNumberIfValid(inputCommand);
                         break;
                 }
 
@@ -155,7 +155,7 @@ namespace GameFifteen
                     this.StartNewGame();
                 }
 
-                inputNumber = this.console.Read("Enter a number to move: ");
+                inputCommand = this.console.Read("Enter a number to move: ");
             }
         }
 

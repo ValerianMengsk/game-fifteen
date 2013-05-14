@@ -62,6 +62,11 @@ namespace GameFifteen
 
                 foreach (var user in this.scoreBoard)
                 {
+                    if (position == 6)
+                    {
+                        break;
+                    }
+
                     var userName = user.Value;
                     var userScore = user.Key;
 

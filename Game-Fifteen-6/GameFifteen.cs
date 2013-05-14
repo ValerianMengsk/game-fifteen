@@ -6,7 +6,7 @@ namespace GameFifteen
     using System.Linq;
 
     /// <summary>
-    /// Main class of the game, includes Main() Method.
+    /// Main class of the game.
     /// Just starts the game through the game engine.
     /// </summary>
     public class GameFifteen

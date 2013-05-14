@@ -28,14 +28,30 @@ namespace GameFifteen
         private Dictionary<int, Coords> numberCoords;
 
         /// <summary>
+        /// Field that keeps matrix indexes
+        /// </summary>
+        private List<int> numbers = null;
+
+        /// <summary>
+        /// Field that keeps solved matrix.
+        /// </summary>
+        private int[,] matrix = null;
+
+        /// <summary>
         /// Initializes a new instance of the <see cref="Field" /> class.
         /// Constructor that initializes and fills the field with numbers.
         /// </summary>
         public Field(int dimentions)
         {
+            if (dimentions < 0)
+            {
+                throw new ArgumentOutOfRangeException("Dimentions of the field can't be nagative!");
+            }
+
             this.Dimentions = dimentions;
             this.field = new int[this.Dimentions, this.Dimentions];
             this.numberCoords = new Dictionary<int, Coords>();
+            this.matrix = GenerateSolvedMatrix();
             this.GetRandomField();
         }
 
@@ -87,22 +103,6 @@ namespace GameFifteen
         /// <returns>Returns true or false.</returns>
         public bool IsSolved()
         {
-            int[,] matrix =
-            {
-                {
-                    1, 2, 3, 4
-                },
-                {
-                    5, 6, 7, 8
-                },
-                {
-                    9, 10, 11, 12
-                },
-                {
-                    13, 14, 15, 0
-                }
-            };
-
             for (int row = 0; row < this.field.GetLength(0); row++)
             {
                 for (int col = 0; col < this.field.GetLength(1); col++)
@@ -123,18 +123,19 @@ namespace GameFifteen
         public void GetRandomField()
         {
             this.numberCoords.Clear();
-            List<int> numbers = new List<int>() { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15 };
 
             Random randomIndex = new Random();
 
-            for (int row = 0; row < this.field.GetLength(0); row++)
+            this.numbers = GenerateMatrixIndexNumbers();
+
+            for (int row = 0; row < this.Dimentions; row++)
             {
-                for (int col = 0; col < this.field.GetLength(1); col++)
+                for (int col = 0; col < this.Dimentions; col++)
                 {
-                    int index = randomIndex.Next(0, numbers.Count);
-                    this.field[row, col] = numbers[index];
-                    this.numberCoords.Add(numbers[index], new Coords(row, col, this.Dimentions));
-                    numbers.RemoveAt(index);
+                    int index = randomIndex.Next(0, this.numbers.Count);
+                    this.field[row, col] = this.numbers[index];
+                    this.numberCoords.Add(this.numbers[index], new Coords(row, col, this.Dimentions));
+                    this.numbers.RemoveAt(index);
                 }
             }
         }
@@ -147,7 +148,7 @@ namespace GameFifteen
         {
             StringBuilder fieldAsString = new StringBuilder();
 
-            fieldAsString.Append(" -------------------\r\n");
+            fieldAsString.AppendLine(' ' + new string('-', 19));
             for (int row = 0; row < this.field.GetLength(0); row++)
             {
                 fieldAsString.Append("|");
@@ -162,12 +163,52 @@ namespace GameFifteen
                     fieldAsString.AppendFormat(" {0,2} |", this.field[row, col]);
                 }
 
-                fieldAsString.Append("\r\n");
+                fieldAsString.AppendLine();
             }
 
-            fieldAsString.Append(" -------------------");
+            fieldAsString.Append(' ' + new string('-', 19));
 
             return fieldAsString.ToString();
+        }
+
+        /// <summary>
+        /// Generating list of numbers, representing matrix indexes
+        /// </summary>
+        private List<int> GenerateMatrixIndexNumbers()
+        {
+            List<int> numbers = new List<int>();
+
+            int numbersCount = this.Dimentions * this.Dimentions;
+
+            for (int currNumber = 0; currNumber < numbersCount; currNumber++)
+            {
+                numbers.Add(currNumber);
+            }
+
+            return numbers;
+        }
+
+        /// <summary>
+        /// Generate solved matrix for specified dimentions.
+        /// </summary>
+        private int[,] GenerateSolvedMatrix()
+        {
+            int[,] solvedMatrix = new int[this.Dimentions, this.Dimentions];
+            int currNumber = 1;
+
+            for (int row = 0; row < this.Dimentions; row++)
+            {
+                for (int col = 0; col < this.Dimentions; col++)
+                {
+                    solvedMatrix[row, col] = currNumber;
+                    currNumber++;
+                }
+            }
+
+            int maxDimention = this.Dimentions - 1;
+            solvedMatrix[maxDimention, maxDimention] = 0;
+
+            return solvedMatrix;
         }
 
         /// <summary>
