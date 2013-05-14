@@ -34,7 +34,7 @@ namespace GameFifteen
         /// <param name="col">Given column.</param>
         public Coords(int row, int col, int dimensions)
         {
-            if (this.dimensions < 0)
+            if (dimensions < 0)
             {
                 throw new ArgumentOutOfRangeException("Dimentions can not be negative!");
             }

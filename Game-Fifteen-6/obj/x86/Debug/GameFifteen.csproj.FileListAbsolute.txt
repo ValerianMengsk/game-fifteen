@@ -14,3 +14,6 @@ D:\others\GitHub\Test\Uni HW\game-fifteen\Game-Fifteen-6\bin\Debug\GameFifteenUI
 D:\others\GitHub\Test\Uni HW\game-fifteen\Game-Fifteen-6\bin\Debug\GameFifteenUI.pdb
 D:\others\GitHub\Test\Uni HW\game-fifteen\Game-Fifteen-6\bin\Debug\GameFifteenCommon.dll
 D:\others\GitHub\Test\Uni HW\game-fifteen\Game-Fifteen-6\bin\Debug\GameFifteenCommon.pdb
+D:\others\GitHub\Test\Uni HW\game-fifteen\Game-Fifteen-6\bin\Debug\Game15.XML
+D:\others\GitHub\Test\Uni HW\game-fifteen\Game-Fifteen-6\bin\Debug\GameFifteenCommon.xml
+D:\others\GitHub\Test\Uni HW\game-fifteen\Game-Fifteen-6\bin\Debug\GameFifteenUI.xml

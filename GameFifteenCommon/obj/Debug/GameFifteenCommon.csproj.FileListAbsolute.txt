@@ -6,3 +6,5 @@ D:\others\GitHub\Test\Uni HW\game-fifteen\GameFifteenCommon\bin\Debug\PowerColle
 D:\others\GitHub\Test\Uni HW\game-fifteen\GameFifteenCommon\bin\Debug\GameFifteenUI.pdb
 D:\others\GitHub\Test\Uni HW\game-fifteen\GameFifteenCommon\obj\Debug\GameFifteenCommon.dll
 D:\others\GitHub\Test\Uni HW\game-fifteen\GameFifteenCommon\obj\Debug\GameFifteenCommon.pdb
+D:\others\GitHub\Test\Uni HW\game-fifteen\GameFifteenCommon\bin\Debug\GameFifteenCommon.XML
+D:\others\GitHub\Test\Uni HW\game-fifteen\GameFifteenCommon\bin\Debug\GameFifteenUI.xml

@@ -161,9 +161,6 @@ namespace GameFifteen
             }
         }
 
-        /// <summary>
-        /// Adds user to score board.
-        /// </summary>
         private void AddUserToScoreBoard(ScoreBoard scoreBoard, int score)
         {
             string name = this.console.Read("Please enter your name for the top scoreboard: ");

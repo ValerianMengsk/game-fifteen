@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Game15</name>
+    </assembly>
+    <members>
+        <member name="T:GameFifteen.GameFifteen">
+            <summary>
+            Main class of the game.
+            Just starts the game through the game engine.
+            </summary>
+        </member>
+    </members>
+</doc>

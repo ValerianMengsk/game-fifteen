@@ -3,3 +3,4 @@ D:\others\GitHub\Test\Uni HW\game-fifteen\GameFifteenUI\bin\Debug\GameFifteenUI.
 D:\others\GitHub\Test\Uni HW\game-fifteen\GameFifteenUI\obj\Debug\GameFifteenUI.csprojResolveAssemblyReference.cache
 D:\others\GitHub\Test\Uni HW\game-fifteen\GameFifteenUI\obj\Debug\GameFifteenUI.dll
 D:\others\GitHub\Test\Uni HW\game-fifteen\GameFifteenUI\obj\Debug\GameFifteenUI.pdb
+D:\others\GitHub\Test\Uni HW\game-fifteen\GameFifteenUI\bin\Debug\GameFifteenUI.XML

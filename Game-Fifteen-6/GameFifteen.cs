@@ -11,9 +11,6 @@ namespace GameFifteen
     /// </summary>
     public class GameFifteen
     {
-        /// <summary>
-        /// Main Method than starts the game.
-        /// </summary>
         public static void Main()
         {
             GameEngine.StartGame();
