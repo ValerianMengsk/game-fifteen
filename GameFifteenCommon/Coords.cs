@@ -30,9 +30,6 @@ namespace GameFifteen
         /// Initializes a new instance of the <see cref="Coords" /> class.
         /// Constructor that defines current coordinates by given row and column.
         /// </summary>
-        /// <param name="row">Given row.</param>
-        /// <param name="col">Given column.</param>
-        /// <param name="dimensions">Given dimensions.</param>
         public Coords(int row, int col, int dimensions)
         {
             if (dimensions < 0)

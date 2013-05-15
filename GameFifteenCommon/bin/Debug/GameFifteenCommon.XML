@@ -30,8 +30,6 @@
             Initializes a new instance of the <see cref="T:GameFifteen.Coords"/> class.
             Constructor that defines current coordinates by given row and column.
             </summary>
-            <param name="row">Given row.</param>
-            <param name="col">Given column.</param>
         </member>
         <member name="M:GameFifteen.Coords.CheckIfIsInRange(System.Int32)">
             <summary>
@@ -125,8 +123,6 @@
             <summary>
             Checks if row and column are in the range of the playfield.
             </summary>
-            <param name="row">Integer value for row.</param>
-            <param name="col">Integer value for column.</param>
         </member>
         <member name="P:GameFifteen.Field.NumberCoords">
             <summary>
@@ -269,7 +265,6 @@
             <summary>
             Method that adds a user to the score board.
             </summary>
-            <param name="score">The score.</param>
         </member>
         <member name="M:GameFifteen.ScoreBoard.ToString">
             <summary>

@@ -229,8 +229,6 @@ namespace GameFifteen
         /// <summary>
         /// Checks if row and column are in the range of the playfield.
         /// </summary>
-        /// <param name="row">Integer value for row.</param>
-        /// <param name="col">Integer value for column.</param>
         private void ValidateDimensions(int row, int col)
         {
             if (!this.IsInRange(row) || !this.IsInRange(col))
