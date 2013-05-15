@@ -13,9 +13,9 @@ namespace GameFifteen
     public class Field
     {
         /// <summary>
-        /// Readonly field, holding field dimentions.
+        /// Readonly field, holding field dimensions.
         /// </summary>
-        private readonly int Dimentions;
+        private readonly int dimensions;
 
         /// <summary>
         /// Place to keep the playfield.
@@ -41,17 +41,17 @@ namespace GameFifteen
         /// Initializes a new instance of the <see cref="Field" /> class.
         /// Constructor that initializes and fills the field with numbers.
         /// </summary>
-        public Field(int dimentions)
+        public Field(int dimensions)
         {
-            if (dimentions < 0)
+            if (dimensions < 0)
             {
-                throw new ArgumentOutOfRangeException("Dimentions of the field can't be nagative!");
+                throw new ArgumentOutOfRangeException("dimensions of the field can't be nagative!");
             }
 
-            this.Dimentions = dimentions;
-            this.field = new int[this.Dimentions, this.Dimentions];
+            this.dimensions = dimensions;
+            this.field = new int[this.dimensions, this.dimensions];
             this.numberCoords = new Dictionary<int, Coords>();
-            this.matrix = GenerateSolvedMatrix();
+            this.matrix = this.GenerateSolvedMatrix();
             this.GetRandomField();
         }
 
@@ -103,11 +103,11 @@ namespace GameFifteen
         /// <returns>Returns true or false.</returns>
         public bool IsSolved()
         {
-            for (int row = 0; row < this.Dimentions; row++)
+            for (int row = 0; row < this.dimensions; row++)
             {
-                for (int col = 0; col < this.Dimentions; col++)
+                for (int col = 0; col < this.dimensions; col++)
                 {
-                    if (this.field[row, col] != matrix[row, col])
+                    if (this.field[row, col] != this.matrix[row, col])
                     {
                         return false;
                     }
@@ -126,15 +126,15 @@ namespace GameFifteen
 
             Random randomIndex = new Random();
 
-            this.numbers = GenerateMatrixIndexNumbers();
+            this.numbers = this.GenerateMatrixIndexNumbers();
 
-            for (int row = 0; row < this.Dimentions; row++)
+            for (int row = 0; row < this.dimensions; row++)
             {
-                for (int col = 0; col < this.Dimentions; col++)
+                for (int col = 0; col < this.dimensions; col++)
                 {
                     int index = randomIndex.Next(0, this.numbers.Count);
                     this.field[row, col] = this.numbers[index];
-                    this.numberCoords.Add(this.numbers[index], new Coords(row, col, this.Dimentions));
+                    this.numberCoords.Add(this.numbers[index], new Coords(row, col, this.dimensions));
                     this.numbers.RemoveAt(index);
                 }
             }
@@ -178,7 +178,7 @@ namespace GameFifteen
         {
             List<int> numbers = new List<int>();
 
-            int numbersCount = this.Dimentions * this.Dimentions;
+            int numbersCount = this.dimensions * this.dimensions;
 
             for (int currNumber = 0; currNumber < numbersCount; currNumber++)
             {
@@ -189,23 +189,23 @@ namespace GameFifteen
         }
 
         /// <summary>
-        /// Generate solved matrix for specified dimentions.
+        /// Generate solved matrix for specified dimensions.
         /// </summary>
         private int[,] GenerateSolvedMatrix()
         {
-            int[,] solvedMatrix = new int[this.Dimentions, this.Dimentions];
+            int[,] solvedMatrix = new int[this.dimensions, this.dimensions];
             int currNumber = 1;
 
-            for (int row = 0; row < this.Dimentions; row++)
+            for (int row = 0; row < this.dimensions; row++)
             {
-                for (int col = 0; col < this.Dimentions; col++)
+                for (int col = 0; col < this.dimensions; col++)
                 {
                     solvedMatrix[row, col] = currNumber;
                     currNumber++;
                 }
             }
 
-            int maxDimention = this.Dimentions - 1;
+            int maxDimention = this.dimensions - 1;
             solvedMatrix[maxDimention, maxDimention] = 0;
 
             return solvedMatrix;
@@ -218,7 +218,7 @@ namespace GameFifteen
         /// <returns>Returns true if number is in range or false if it's not.</returns>
         private bool IsInRange(int dimension)
         {
-            if (dimension < 0 || dimension >= this.Dimentions)
+            if (dimension < 0 || dimension >= this.dimensions)
             {
                 return false;
             }
