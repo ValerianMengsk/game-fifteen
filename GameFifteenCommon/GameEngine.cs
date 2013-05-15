@@ -29,7 +29,7 @@ namespace GameFifteen
         /// <summary>
         /// Singleton eager initialization.
         /// </summary>
-        private static GameEngine GameEngineInstance = new GameEngine();
+        private static GameEngine gameEngineInstance = new GameEngine();
 
         /// <summary>
         /// Field that holds the gamefield.
@@ -66,7 +66,7 @@ namespace GameFifteen
         /// <returns>The instance of the GameEngine.</returns>
         public static GameEngine StartGame()
         {
-            return GameEngineInstance;
+            return gameEngineInstance;
         }
 
         /// <summary>

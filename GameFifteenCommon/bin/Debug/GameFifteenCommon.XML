@@ -56,9 +56,9 @@
             Class that represents the playfield.
             </summary>
         </member>
-        <member name="F:GameFifteen.Field.Dimentions">
+        <member name="F:GameFifteen.Field.dimensions">
             <summary>
-            Readonly field, holding field dimentions.
+            Readonly field, holding field dimensions.
             </summary>
         </member>
         <member name="F:GameFifteen.Field.field">
@@ -111,7 +111,7 @@
         </member>
         <member name="M:GameFifteen.Field.GenerateSolvedMatrix">
             <summary>
-            Generate solved matrix for specified dimentions.
+            Generate solved matrix for specified dimensions.
             </summary>
         </member>
         <member name="M:GameFifteen.Field.IsInRange(System.Int32)">
@@ -164,7 +164,7 @@
             Constant for the field dimentions.
             </summary>
         </member>
-        <member name="F:GameFifteen.GameEngine.GameEngineInstance">
+        <member name="F:GameFifteen.GameEngine.gameEngineInstance">
             <summary>
             Singleton eager initialization.
             </summary>

@@ -32,6 +32,7 @@ namespace GameFifteen
         /// </summary>
         /// <param name="row">Given row.</param>
         /// <param name="col">Given column.</param>
+        /// <param name="dimensions">Given dimensions.</param>
         public Coords(int row, int col, int dimensions)
         {
             if (dimensions < 0)

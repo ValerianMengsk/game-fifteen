@@ -1,9 +1,9 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using GameFifteen;
-
-namespace GameFifteenTests
+﻿namespace GameFifteenTests
 {
+    using System;
+    using GameFifteen;
+    using Microsoft.VisualStudio.TestTools.UnitTesting;
+
     [TestClass]
     public class FieldTests
     {
@@ -54,21 +54,21 @@ namespace GameFifteenTests
         [TestMethod]
         public void SolvedFieldTest()
         {
-            Field GameField = new Field(4);
+            Field gameField = new Field(4);
             int number = 1;
 
             for (int row = 0; row < 4; row++)
             {
                 for (int col = 0; col < 4; col++)
                 {
-                    GameField[row, col] = number;
+                    gameField[row, col] = number;
                     number++;
                 }
             }
 
-            GameField[3, 3] = 0;
+            gameField[3, 3] = 0;
 
-            Assert.IsTrue(GameField.IsSolved());
+            Assert.IsTrue(gameField.IsSolved());
         }
 
         [TestMethod]
@@ -83,9 +83,9 @@ namespace GameFifteenTests
         [TestMethod]
         public void FieldLengthTest()
         {
-            Field GameField = new Field(4);
+            Field gameField = new Field(4);
 
-            int firstGameFieldLength = GameField.ToString().Length;
+            int firstGameFieldLength = gameField.ToString().Length;
 
             Assert.AreEqual(134, firstGameFieldLength);
         }
@@ -93,9 +93,9 @@ namespace GameFifteenTests
         [TestMethod]
         public void FieldGetNumberTest()
         {
-            Field GameField = new Field(4);
+            Field gameField = new Field(4);
 
-            var number = GameField[0, 0];
+            var number = gameField[0, 0];
 
             bool isValidNumber = number >= 0 && number < 16;
 
@@ -106,18 +106,18 @@ namespace GameFifteenTests
         [ExpectedException(typeof(IndexOutOfRangeException))]
         public void FieldGetNumberNegativeDimentionsTest()
         {
-            Field GameField = new Field(4);
+            Field gameField = new Field(4);
 
-            var number = GameField[-10, 0];
+            var number = gameField[-10, 0];
         }
 
         [TestMethod]
         [ExpectedException(typeof(IndexOutOfRangeException))]
         public void FieldGetNumberTooBigDimentionsTest()
         {
-            Field GameField = new Field(4);
+            Field gameField = new Field(4);
 
-            var number = GameField[10, 10];
+            var number = gameField[10, 10];
         }
 
         [TestMethod]

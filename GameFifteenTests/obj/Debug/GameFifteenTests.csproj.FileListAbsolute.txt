@@ -21,3 +21,18 @@ D:\others\GitHub\Test\Uni HW\game-fifteen\GameFifteenTests\bin\Debug\GameFifteen
 D:\others\GitHub\Test\Uni HW\game-fifteen\GameFifteenTests\bin\Debug\Game15.xml
 D:\others\GitHub\Test\Uni HW\game-fifteen\GameFifteenTests\bin\Debug\GameFifteenCommon.xml
 D:\others\GitHub\Test\Uni HW\game-fifteen\GameFifteenTests\bin\Debug\GameFifteenUI.xml
+C:\Users\Simeon\Documents\GitHub\game-fifteen\GameFifteenTests\bin\Debug\GameFifteenTests.dll
+C:\Users\Simeon\Documents\GitHub\game-fifteen\GameFifteenTests\bin\Debug\GameFifteenTests.pdb
+C:\Users\Simeon\Documents\GitHub\game-fifteen\GameFifteenTests\bin\Debug\Game15.exe
+C:\Users\Simeon\Documents\GitHub\game-fifteen\GameFifteenTests\bin\Debug\GameFifteenCommon.dll
+C:\Users\Simeon\Documents\GitHub\game-fifteen\GameFifteenTests\bin\Debug\GameFifteenUI.dll
+C:\Users\Simeon\Documents\GitHub\game-fifteen\GameFifteenTests\bin\Debug\PowerCollections.dll
+C:\Users\Simeon\Documents\GitHub\game-fifteen\GameFifteenTests\bin\Debug\Game15.pdb
+C:\Users\Simeon\Documents\GitHub\game-fifteen\GameFifteenTests\bin\Debug\Game15.xml
+C:\Users\Simeon\Documents\GitHub\game-fifteen\GameFifteenTests\bin\Debug\GameFifteenCommon.pdb
+C:\Users\Simeon\Documents\GitHub\game-fifteen\GameFifteenTests\bin\Debug\GameFifteenCommon.xml
+C:\Users\Simeon\Documents\GitHub\game-fifteen\GameFifteenTests\bin\Debug\GameFifteenUI.pdb
+C:\Users\Simeon\Documents\GitHub\game-fifteen\GameFifteenTests\bin\Debug\GameFifteenUI.xml
+C:\Users\Simeon\Documents\GitHub\game-fifteen\GameFifteenTests\obj\Debug\GameFifteenTests.csprojResolveAssemblyReference.cache
+C:\Users\Simeon\Documents\GitHub\game-fifteen\GameFifteenTests\obj\Debug\GameFifteenTests.dll
+C:\Users\Simeon\Documents\GitHub\game-fifteen\GameFifteenTests\obj\Debug\GameFifteenTests.pdb

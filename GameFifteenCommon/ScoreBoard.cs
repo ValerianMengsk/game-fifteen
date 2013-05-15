@@ -34,6 +34,7 @@ namespace GameFifteen
         /// <summary>
         /// Method that adds a user to the score board.
         /// </summary>
+        /// <param name="name">The name.</param>
         /// <param name="score">The score.</param>
         public void Add(string name, int score)
         {

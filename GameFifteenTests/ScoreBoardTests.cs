@@ -1,9 +1,9 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using GameFifteen;
-
-namespace GameFifteenTests
+﻿namespace GameFifteenTests
 {
+    using System;
+    using GameFifteen;
+    using Microsoft.VisualStudio.TestTools.UnitTesting;
+
     [TestClass]
     public class ScoreBoardTests
     {
@@ -47,7 +47,7 @@ namespace GameFifteenTests
         public void AddEmptyNameToScoreBoard()
         {
             ScoreBoard scoreBoard = new ScoreBoard();
-            scoreBoard.Add("", 23);
+            scoreBoard.Add(String.Empty, 23);
 
             Assert.AreEqual(scoreBoard.ToString(), "1. {Anonymous} --> 23 moves\r\n");
         }

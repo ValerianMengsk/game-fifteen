@@ -1,9 +1,9 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using GameFifteen;
-
-namespace GameFifteenTests
+﻿namespace GameFifteenTests
 {
+    using System;
+    using GameFifteen;
+    using Microsoft.VisualStudio.TestTools.UnitTesting;
+
     [TestClass]
     public class CoordsTests
     {
