@@ -124,11 +124,11 @@ namespace GameFifteen
 
             ScoreBoard scoreBoard = new ScoreBoard();
 
-            string inputCommand = this.console.Read("Enter a number to move: ");
+            string inputCommand = this.console.Read("Enter a number to move: ").Trim();
             bool gameIsFinished = false;
             int moves = 0;
 
-            while (inputCommand.Trim() != "exit")
+            while (inputCommand != "exit")
             {
                 moves++;
                 switch (inputCommand)
@@ -170,7 +170,7 @@ namespace GameFifteen
         /// <summary>
         /// Checks if the move is valid.
         /// If it is, moves the number.
-        /// Otherwise it reports an error.
+        /// Otherwise reports an error.
         /// </summary>
         /// <param name="inputNumber">Number to be moved.</param>
         private void MoveNumberIfValid(string inputNumber)

@@ -103,9 +103,9 @@ namespace GameFifteen
         /// <returns>Returns true or false.</returns>
         public bool IsSolved()
         {
-            for (int row = 0; row < this.field.GetLength(0); row++)
+            for (int row = 0; row < this.Dimentions; row++)
             {
-                for (int col = 0; col < this.field.GetLength(1); col++)
+                for (int col = 0; col < this.Dimentions; col++)
                 {
                     if (this.field[row, col] != matrix[row, col])
                     {
@@ -235,7 +235,7 @@ namespace GameFifteen
         {
             if (!this.IsInRange(row) || !this.IsInRange(col))
             {
-                throw new ArgumentOutOfRangeException("The dimensions you have provided are out of range!");
+                throw new IndexOutOfRangeException("The dimensions you have provided are out of range!");
             }
         }
     }

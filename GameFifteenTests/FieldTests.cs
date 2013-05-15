@@ -52,6 +52,26 @@ namespace GameFifteenTests
         }
 
         [TestMethod]
+        public void SolvedFieldTest()
+        {
+            Field GameField = new Field(4);
+            int number = 1;
+
+            for (int row = 0; row < 4; row++)
+            {
+                for (int col = 0; col < 4; col++)
+                {
+                    GameField[row, col] = number;
+                    number++;
+                }
+            }
+
+            GameField[3, 3] = 0;
+
+            Assert.IsTrue(GameField.IsSolved());
+        }
+
+        [TestMethod]
         public void NumberCoordsTest()
         {
             Field gameField = new Field(4);
@@ -80,6 +100,24 @@ namespace GameFifteenTests
             bool isValidNumber = number >= 0 && number < 16;
 
             Assert.IsTrue(isValidNumber);
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(IndexOutOfRangeException))]
+        public void FieldGetNumberNegativeDimentionsTest()
+        {
+            Field GameField = new Field(4);
+
+            var number = GameField[-10, 0];
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(IndexOutOfRangeException))]
+        public void FieldGetNumberTooBigDimentionsTest()
+        {
+            Field GameField = new Field(4);
+
+            var number = GameField[10, 10];
         }
 
         [TestMethod]

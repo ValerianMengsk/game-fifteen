@@ -215,7 +215,7 @@
             <summary>
             Checks if the move is valid.
             If it is, moves the number.
-            Otherwise it reports an error.
+            Otherwise reports an error.
             </summary>
             <param name="inputNumber">Number to be moved.</param>
         </member>
