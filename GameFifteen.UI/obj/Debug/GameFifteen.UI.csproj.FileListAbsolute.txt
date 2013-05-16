@@ -1,0 +1,16 @@
+C:\Users\rosss\Documents\GitHub\game-fifteen\GAME\Game-fifteen\GameFifteen.UI\obj\Debug\GameFifteen.UI.csprojResolveAssemblyReference.cache
+C:\Users\rosss\Documents\GitHub\game-fifteen\GAME\Game-fifteen\GameFifteen.UI\bin\Debug\GameFifteen.UI.exe
+C:\Users\rosss\Documents\GitHub\game-fifteen\GAME\Game-fifteen\GameFifteen.UI\bin\Debug\GameFifteen.UI.pdb
+C:\Users\rosss\Documents\GitHub\game-fifteen\GAME\Game-fifteen\GameFifteen.UI\bin\Debug\GameFifteen.Common.dll
+C:\Users\rosss\Documents\GitHub\game-fifteen\GAME\Game-fifteen\GameFifteen.UI\bin\Debug\PowerCollections.dll
+C:\Users\rosss\Documents\GitHub\game-fifteen\GAME\Game-fifteen\GameFifteen.UI\bin\Debug\GameFifteen.Common.pdb
+C:\Users\rosss\Documents\GitHub\game-fifteen\GAME\Game-fifteen\GameFifteen.UI\obj\Debug\GameFifteen.UI.exe
+C:\Users\rosss\Documents\GitHub\game-fifteen\GAME\Game-fifteen\GameFifteen.UI\obj\Debug\GameFifteen.UI.pdb
+C:\Users\rosss\Documents\GitHub\game-15\GameFifteen.UI\obj\Debug\GameFifteen.UI.exe
+C:\Users\rosss\Documents\GitHub\game-15\GameFifteen.UI\obj\Debug\GameFifteen.UI.pdb
+C:\Users\rosss\Documents\GitHub\game-15\GameFifteen.UI\bin\Debug\GameFifteen.UI.exe
+C:\Users\rosss\Documents\GitHub\game-15\GameFifteen.UI\bin\Debug\GameFifteen.UI.pdb
+C:\Users\rosss\Documents\GitHub\game-15\GameFifteen.UI\bin\Debug\GameFifteen.Common.dll
+C:\Users\rosss\Documents\GitHub\game-15\GameFifteen.UI\bin\Debug\PowerCollections.dll
+C:\Users\rosss\Documents\GitHub\game-15\GameFifteen.UI\bin\Debug\GameFifteen.Common.pdb
+C:\Users\rosss\Documents\GitHub\game-15\GameFifteen.UI\obj\Debug\GameFifteen.UI.csprojResolveAssemblyReference.cache

@@ -1,9 +1,0 @@
-C:\Users\Simeon\Documents\GitHub\game-fifteen\GameFifteenCommon\bin\x64\Debug\GameFifteenCommon.dll
-C:\Users\Simeon\Documents\GitHub\game-fifteen\GameFifteenCommon\bin\x64\Debug\GameFifteenCommon.pdb
-C:\Users\Simeon\Documents\GitHub\game-fifteen\GameFifteenCommon\bin\x64\Debug\GameFifteenCommon.XML
-C:\Users\Simeon\Documents\GitHub\game-fifteen\GameFifteenCommon\bin\x64\Debug\GameFifteenUI.dll
-C:\Users\Simeon\Documents\GitHub\game-fifteen\GameFifteenCommon\bin\x64\Debug\PowerCollections.dll
-C:\Users\Simeon\Documents\GitHub\game-fifteen\GameFifteenCommon\bin\x64\Debug\GameFifteenUI.pdb
-C:\Users\Simeon\Documents\GitHub\game-fifteen\GameFifteenCommon\obj\x64\Debug\GameFifteenCommon.csprojResolveAssemblyReference.cache
-C:\Users\Simeon\Documents\GitHub\game-fifteen\GameFifteenCommon\obj\x64\Debug\GameFifteenCommon.dll
-C:\Users\Simeon\Documents\GitHub\game-fifteen\GameFifteenCommon\obj\x64\Debug\GameFifteenCommon.pdb

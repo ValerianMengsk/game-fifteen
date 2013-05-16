@@ -1,4 +1,0 @@
-C:\Users\Simeon\Documents\GitHub\game-fifteen\GameFifteenUI\bin\x64\Release\GameFifteenUI.dll
-C:\Users\Simeon\Documents\GitHub\game-fifteen\GameFifteenUI\bin\x64\Release\GameFifteenUI.pdb
-C:\Users\Simeon\Documents\GitHub\game-fifteen\GameFifteenUI\obj\x64\Release\GameFifteenUI.dll
-C:\Users\Simeon\Documents\GitHub\game-fifteen\GameFifteenUI\obj\x64\Release\GameFifteenUI.pdb
