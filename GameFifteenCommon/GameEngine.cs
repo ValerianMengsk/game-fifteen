@@ -130,7 +130,6 @@ namespace GameFifteen
 
             while (inputCommand != "exit")
             {
-                moves++;
                 switch (inputCommand)
                 {
                     case "top":
@@ -140,7 +139,16 @@ namespace GameFifteen
                         this.StartNewGame();
                         break;
                     default:
-                        this.MoveNumberIfValid(inputCommand);
+                        if (IsNumberMovable(inputCommand))
+                        {
+                            //if move is Valid then moves++!
+                            MoveNumber(int.Parse(inputCommand));
+                            moves++;
+                        }
+                        else
+                        {
+                            this.console.Display("Illegal command!");
+                        }
                         break;
                 }
 
@@ -173,18 +181,18 @@ namespace GameFifteen
         /// Otherwise reports an error.
         /// </summary>
         /// <param name="inputNumber">Number to be moved.</param>
-        private void MoveNumberIfValid(string inputNumber)
-        {
-            int numberToMove = -1;
-            int.TryParse(inputNumber, out numberToMove);
+        //private void MoveNumberIfValid(string inputNumber)
+        //{
+        //    int numberToMove = -1;
+        //    int.TryParse(inputNumber, out numberToMove);
             
-            bool isNumberMoved = this.IsNumberMoved(numberToMove);
+        //    bool isNumberMoved = this.IsNumberMoved(numberToMove);
 
-            if (!isNumberMoved)
-            {
-                this.console.Display("Illegal command!");
-            }
-        }
+        //    if (!isNumberMoved)
+        //    {
+        //        this.console.Display("Illegal command!");
+        //    }
+        //}
 
         /// <summary>
         /// Validates the passed index.
@@ -193,32 +201,54 @@ namespace GameFifteen
         /// </summary>
         /// <param name="index">Number index in numbers coords.</param>
         /// <returns>True if the number is moved and false otherwise.</returns>
-        private bool IsNumberMoved(int index)
+        //private bool IsNumberMoved(int index)
+        //{
+        //    bool inRange = (index > DownBound) && (index < UpBound);
+        //    bool numberMoved = true;
+
+        //    if (inRange)
+        //    {
+        //        var currCell = this.gameField.NumberCoords[0];
+        //        var cellToBeMoveTo = this.gameField.NumberCoords[index];
+        //        bool validNaighbours = this.CheckNeighbours(currCell, cellToBeMoveTo);
+
+        //        if (validNaighbours)
+        //        {
+        //            this.MoveNumber(index);
+        //        }
+        //        else
+        //        {
+        //            numberMoved = false;
+        //        }
+        //    }
+        //    else
+        //    {
+        //        numberMoved = false;
+        //    }
+
+        //    return numberMoved;
+        //}
+
+        /// <summary>
+        /// Validates the passed index.
+        /// /// </summary>
+        /// <param name="inputNumber">String inputNumber to be moved.</param>
+        /// <returns>True if the number is movable and false otherwise.</returns>
+        private bool IsNumberMovable(string inputNumber)
         {
-            bool inRange = (index > DownBound) && (index < UpBound);
-            bool numberMoved = true;
-
-            if (inRange)
+            int numberToMove = -1;
+            if (!int.TryParse(inputNumber, out numberToMove))
             {
-                var currCell = this.gameField.NumberCoords[0];
-                var cellToBeMoveTo = this.gameField.NumberCoords[index];
-                bool validNaighbours = this.CheckNeighbours(currCell, cellToBeMoveTo);
-
-                if (validNaighbours)
-                {
-                    this.MoveNumber(index);
-                }
-                else
-                {
-                    numberMoved = false;
-                }
+                return false;
             }
-            else
+            if( !( (numberToMove > DownBound) && (numberToMove < UpBound) ) )
             {
-                numberMoved = false;
+                return false;
             }
 
-            return numberMoved;
+            var currCell = this.gameField.NumberCoords[0];
+            var cellToBeMoveTo = this.gameField.NumberCoords[numberToMove];
+            return CheckNeighbours(currCell, cellToBeMoveTo);
         }
 
         /// <summary>

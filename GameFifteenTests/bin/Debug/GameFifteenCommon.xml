@@ -207,22 +207,12 @@
             Handles user input and outputs game response.
             </summary>
         </member>
-        <member name="M:GameFifteen.GameEngine.MoveNumberIfValid(System.String)">
-            <summary>
-            Checks if the move is valid.
-            If it is, moves the number.
-            Otherwise reports an error.
-            </summary>
-            <param name="inputNumber">Number to be moved.</param>
-        </member>
-        <member name="M:GameFifteen.GameEngine.IsNumberMoved(System.Int32)">
+        <member name="M:GameFifteen.GameEngine.IsNumberMovable(System.String)">
             <summary>
             Validates the passed index.
-            If it's valid moves the number and returns true. 
-            If it isn't returns false.
-            </summary>
-            <param name="index">Number index in numbers coords.</param>
-            <returns>True if the number is moved and false otherwise.</returns>
+            /// </summary>
+            <param name="inputNumber">String inputNumber to be moved.</param>
+            <returns>True if the number is movable and false otherwise.</returns>
         </member>
         <member name="M:GameFifteen.GameEngine.MoveNumber(System.Int32)">
             <summary>

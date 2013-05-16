@@ -3,6 +3,8 @@
     using System;
     using GameFifteen;
     using Microsoft.VisualStudio.TestTools.UnitTesting;
+    using System.Text;
+    using System.IO;
 
     [TestClass]
     public class ScoreBoardTests
@@ -41,6 +43,26 @@
             scoreBoard.Add("Tosho", 10);
 
             Assert.AreEqual(scoreBoard.ToString(), "1. {Tosho} --> 10 moves\r\n2. {Mimi} --> 12 moves\r\n3. {Gosho} --> 13 moves\r\n4. {Stamat} --> 14 moves\r\n5. {Kiro} --> 17 moves\r\n");
+        }
+
+        [TestMethod]
+        public void AddshortMaxValueNumberOfPlayersTest()
+        {
+            ScoreBoard scoreBoard = new ScoreBoard();
+            for (int i = 0; i < short.MaxValue; i++ )
+            {
+                scoreBoard.Add( i.ToString(), 23);
+            }
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentException))]
+        public void AddTwoPlayersWithSameNameAndScoreTest()
+        {
+            ScoreBoard scoreBoard = new ScoreBoard();
+            
+            scoreBoard.Add("Pesho", 23);
+            scoreBoard.Add("Pesho", 23);
         }
 
         [TestMethod]
