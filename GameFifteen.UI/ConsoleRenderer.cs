@@ -1,10 +1,10 @@
 ﻿[module: System.Diagnostics.CodeAnalysis.SuppressMessage("StyleCop.CSharp.DocumentationRules", "*", Justification = "Reviewed. Suppression is OK here.")]
 
-namespace GameFifteen.UI
+namespace GameFifteenUI
 {
     using System;
     using System.Linq;
-    using GameFifteen.Common;
+    using GameFifteenCommon;
     using System.Collections.Generic;
     using System.Text;
     using Wintellect.PowerCollections;
@@ -35,7 +35,7 @@ namespace GameFifteen.UI
             return Console.ReadLine();
         }
 
-        public void PrintString(IList<int> field)
+        public void PrintField(IList<int> field)
         {
             int dimensions = (int)Math.Sqrt(field.Count);
             int count = 0;
@@ -63,7 +63,8 @@ namespace GameFifteen.UI
             fieldAsString.Append(' ' + new string('-', 19));
             Console.WriteLine(fieldAsString.ToString());
         }
-        public void PrintScores(OrderedMultiDictionary<int, string> scores)
+
+        public void PrintScoreboard(OrderedMultiDictionary<int, string> scores)
         {
             if (scores.Count == 0)
             {

@@ -1,10 +1,9 @@
 ﻿[module: System.Diagnostics.CodeAnalysis.SuppressMessage("StyleCop.CSharp.DocumentationRules", "*", Justification = "Reviewed. Suppression is OK here.")]
 
-namespace GameFifteen.Common
+namespace GameFifteenCommon
 {
     using System;
     using System.Linq;
-    using System.Text;
 
     /// <summary>
     /// Game manager that controls the game.
@@ -27,26 +26,49 @@ namespace GameFifteen.Common
         private const int Dimentions = 4;
 
         /// <summary>
-        /// Generates string representation of the field.
-        /// </summary>
-        /// <returns>String representation of the field.</returns>
-
-
-        public GameEngine()
-        {
-        }
-
-        /// <summary>
         /// Field that holds the gamefield.
         /// </summary>
         private Field gameField = null;
 
         /// <summary>
+        /// Singleton eager initialization.
+        /// </summary>
+        private static GameEngine GameEngineInstance = null;
+
+        /// <summary>
+        /// Prevents a default instance of the <see cref="GameEngine" /> class from being created.
+        /// Part of Singleton.
+        /// Starts the game if there are no errors.
+        /// </summary>
+        private GameEngine(IRenderable renderer)
+        {
+            try
+            {
+                this.StartNewGame(renderer);
+            }
+            catch (ArgumentOutOfRangeException ex)
+            {
+                renderer.Write(ex.Message);
+            }
+        }
+
+        /// <summary>
+        /// Method that gets the main instance of the game engine.
+        /// </summary>
+        /// <returns>The instance of the GameEngine.</returns>
+        public static GameEngine StartGame(IRenderable renderer)
+        {
+            GameEngineInstance = new GameEngine(renderer);
+            return GameEngineInstance;
+        }
+
+        /// <summary>
         /// Method that starts the new game, when it was just loaded or restarted. 
         /// </summary>
-        public void StartNewGame(IRenderable renderer)
+        private void StartNewGame(IRenderable renderer)
         {
             this.gameField = new Field(Dimentions);
+            renderer.Write(Messages.StartupMessage());
 
             do
             {
@@ -91,24 +113,22 @@ namespace GameFifteen.Common
         private void BeginGame(IRenderable render)
         {
             ScoreBoard scoreBoard = new ScoreBoard();
-            render.PrintString(gameField.GetFieldNumbers());
-            //string inputCommand = this.console.Read("Enter a number to move: ").Trim();
+            render.PrintField(gameField.GetFieldNumbers());
             bool gameIsFinished = false;
             int moves = 0;
 
-            while (true)
+            string inputCommand = render.Read("give me command: ").Trim();
+
+            while (inputCommand != "exit")
             {
-                string inputCommand = render.Read("give me command: ");
-                switch (inputCommand.Trim())
+                switch (inputCommand)
                 {
                     case "top":
-                        render.PrintScores(scoreBoard.Scores());
+                        render.PrintScoreboard(scoreBoard.Scores());
                         break;
                     case "restart":
                         this.StartNewGame(render);
                         break;
-                    case "exit":
-                        return;
                     default:
                         if (this.IsNumberMovable(inputCommand))
                         {
@@ -122,7 +142,7 @@ namespace GameFifteen.Common
                         break;
                 }
 
-                render.PrintString(this.gameField.GetFieldNumbers());
+                render.PrintField(this.gameField.GetFieldNumbers());
                 gameIsFinished = this.gameField.IsSolved();
 
                 if (gameIsFinished)
@@ -135,7 +155,7 @@ namespace GameFifteen.Common
                     this.StartNewGame(render);
                 }
 
-
+                inputCommand = render.Read("give me command: ").Trim();
             }
         }
 

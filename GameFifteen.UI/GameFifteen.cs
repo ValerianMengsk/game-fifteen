@@ -1,8 +1,8 @@
 ﻿[module: System.Diagnostics.CodeAnalysis.SuppressMessage("StyleCop.CSharp.DocumentationRules", "*", Justification = "Reviewed. Suppression is OK here.")]
 
-namespace GameFifteen.UI
+namespace GameFifteenUI
 {
-    using GameFifteen.Common;
+    using GameFifteenCommon;
     using System;
     using System.Linq;
 
@@ -10,14 +10,12 @@ namespace GameFifteen.UI
     /// Main class of the game.
     /// Just starts the game through the game engine.
     /// </summary>
-    public class Program
+    public class GameFifteen
     {
         public static void Main()
         {
-            IRenderable Player = new ConsoleRenderer();
-            Player.Write(ConsoleMessages.StartupMessage());
-            GameEngine instance = new GameEngine();
-            instance.StartNewGame(Player);
+            IRenderable renderer = new ConsoleRenderer();
+            GameEngine.StartGame(renderer);
         }
     }
 }

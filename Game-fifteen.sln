@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameFifteen.Common", "GameFifteen.Common\GameFifteen.Common.csproj", "{B9919040-1B68-4B52-B275-F382769A7ADF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameFifteen.UI", "GameFifteen.UI\GameFifteen.UI.csproj", "{88D26F83-276A-444C-8D3C-E04D310E85B1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameFifteenUI", "GameFifteen.UI\GameFifteenUI.csproj", "{88D26F83-276A-444C-8D3C-E04D310E85B1}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameFifteen.Tests", "GameFifteen.Tests\GameFifteen.Tests.csproj", "{44A2DE2E-DCD0-458D-AA46-AACA59C46230}"
 EndProject

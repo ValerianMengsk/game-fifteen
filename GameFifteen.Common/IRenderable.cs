@@ -1,6 +1,6 @@
 ﻿[module: System.Diagnostics.CodeAnalysis.SuppressMessage("StyleCop.CSharp.DocumentationRules", "*", Justification = "Reviewed. Suppression is OK here.")]
 
-namespace GameFifteen.Common
+namespace GameFifteenCommon
 {
     using System;
     using System.Collections.Generic;
@@ -25,8 +25,8 @@ namespace GameFifteen.Common
         /// <returns>String entered by player.</returns>
         string Read(string message);
 
-        void PrintString(IList<int> field);
+        void PrintField(IList<int> field);
 
-        void PrintScores(OrderedMultiDictionary<int, string> scores);
+        void PrintScoreboard(OrderedMultiDictionary<int, string> scores);
     }
 }

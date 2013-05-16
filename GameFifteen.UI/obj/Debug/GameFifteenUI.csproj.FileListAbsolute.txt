@@ -1,0 +1,7 @@
+D:\others\GitHub\Test\Uni HW\game-fifteen\GameFifteen.UI\obj\Debug\GameFifteen.UI.exe
+D:\others\GitHub\Test\Uni HW\game-fifteen\GameFifteen.UI\obj\Debug\GameFifteen.UI.pdb
+D:\others\GitHub\Test\Uni HW\game-fifteen\GameFifteen.UI\bin\Debug\GameFifteen.UI.exe
+D:\others\GitHub\Test\Uni HW\game-fifteen\GameFifteen.UI\bin\Debug\GameFifteen.UI.pdb
+D:\others\GitHub\Test\Uni HW\game-fifteen\GameFifteen.UI\bin\Debug\GameFifteen.Common.dll
+D:\others\GitHub\Test\Uni HW\game-fifteen\GameFifteen.UI\bin\Debug\GameFifteen.Common.pdb
+D:\others\GitHub\Test\Uni HW\game-fifteen\GameFifteen.UI\obj\Debug\GameFifteenUI.csprojResolveAssemblyReference.cache

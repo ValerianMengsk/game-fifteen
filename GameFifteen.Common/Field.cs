@@ -1,6 +1,6 @@
 ﻿[module: System.Diagnostics.CodeAnalysis.SuppressMessage("StyleCop.CSharp.DocumentationRules", "*", Justification = "Reviewed. Suppression is OK here.")]
 
-namespace GameFifteen.Common
+namespace GameFifteenCommon
 {
     using System;
     using System.Collections.Generic;

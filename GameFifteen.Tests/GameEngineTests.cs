@@ -1,12 +1,12 @@
 ﻿namespace GameFifteen.Tests
 {
-    using GameFifteen.Common;
+    using GameFifteenCommon;
     using System;
     using System.IO;
     using System.Text;
     using GameFifteen;
     using Microsoft.VisualStudio.TestTools.UnitTesting;
-    using GameFifteen.UI;
+    using GameFifteenUI;
 
     [TestClass]
     public class GameEngineTests
@@ -30,9 +30,8 @@
                 new MemoryStream(Encoding.ASCII.GetBytes(stringBilder.ToString())));
 
             Console.SetIn(reader);
-            GameEngine game = new GameEngine();
             IRenderable rend = new ConsoleRenderer();
-            game.StartNewGame(rend);
+            GameEngine.StartGame(rend);
             reader.Close();
         }
     }

@@ -61,9 +61,9 @@
       <Project>{b9919040-1b68-4b52-b275-f382769a7adf}</Project>
       <Name>GameFifteen.Common</Name>
     </ProjectReference>
-    <ProjectReference Include="..\GameFifteen.UI\GameFifteen.UI.csproj">
+    <ProjectReference Include="..\GameFifteen.UI\GameFifteenUI.csproj">
       <Project>{88d26f83-276a-444c-8d3c-e04d310e85b1}</Project>
-      <Name>GameFifteen.UI</Name>
+      <Name>GameFifteenUI</Name>
     </ProjectReference>
   </ItemGroup>
   <Choose>

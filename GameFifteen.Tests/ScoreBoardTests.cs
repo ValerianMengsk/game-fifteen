@@ -3,7 +3,7 @@
     using System;
     using GameFifteen;
     using Microsoft.VisualStudio.TestTools.UnitTesting;
-    using GameFifteen.Common;
+    using GameFifteenCommon;
 
     [TestClass]
     public class ScoreBoardTests

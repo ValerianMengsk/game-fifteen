@@ -14,3 +14,10 @@ C:\Users\rosss\Documents\GitHub\game-15\GameFifteen.UI\bin\Debug\GameFifteen.Com
 C:\Users\rosss\Documents\GitHub\game-15\GameFifteen.UI\bin\Debug\PowerCollections.dll
 C:\Users\rosss\Documents\GitHub\game-15\GameFifteen.UI\bin\Debug\GameFifteen.Common.pdb
 C:\Users\rosss\Documents\GitHub\game-15\GameFifteen.UI\obj\Debug\GameFifteen.UI.csprojResolveAssemblyReference.cache
+D:\others\GitHub\Test\Uni HW\game-fifteen\GameFifteen.UI\obj\Debug\GameFifteen.UI.pdb
+D:\others\GitHub\Test\Uni HW\game-fifteen\GameFifteen.UI\obj\Debug\GameFifteen.UI.csprojResolveAssemblyReference.cache
+D:\others\GitHub\Test\Uni HW\game-fifteen\GameFifteen.UI\bin\Debug\GameFifteen.UI.pdb
+D:\others\GitHub\Test\Uni HW\game-fifteen\GameFifteen.UI\bin\Debug\GameFifteen.Common.dll
+D:\others\GitHub\Test\Uni HW\game-fifteen\GameFifteen.UI\bin\Debug\GameFifteen.Common.pdb
+D:\others\GitHub\Test\Uni HW\game-fifteen\GameFifteen.UI\bin\Debug\GameFifteen.UI.exe
+D:\others\GitHub\Test\Uni HW\game-fifteen\GameFifteen.UI\obj\Debug\GameFifteen.UI.exe
