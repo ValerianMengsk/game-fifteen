@@ -28,3 +28,13 @@ D:\others\GitHub\Test\Uni HW\game-fifteen\GameFifteen.Tests\obj\Debug\GameFiftee
 D:\others\GitHub\Test\Uni HW\game-fifteen\GameFifteen.Tests\obj\Debug\GameFifteen.Tests.dll
 D:\others\GitHub\Test\Uni HW\game-fifteen\GameFifteen.Tests\obj\Debug\GameFifteen.Tests.pdb
 D:\others\GitHub\Test\Uni HW\game-fifteen\GameFifteen.Tests\bin\Debug\GameFifteen.UI.exe
+C:\Users\desty\Documents\GitHub\game-15\game-fifteen\GameFifteen.Tests\bin\Debug\GameFifteen.Tests.dll
+C:\Users\desty\Documents\GitHub\game-15\game-fifteen\GameFifteen.Tests\bin\Debug\GameFifteen.Tests.pdb
+C:\Users\desty\Documents\GitHub\game-15\game-fifteen\GameFifteen.Tests\bin\Debug\GameFifteen.Common.dll
+C:\Users\desty\Documents\GitHub\game-15\game-fifteen\GameFifteen.Tests\bin\Debug\GameFifteen.UI.exe
+C:\Users\desty\Documents\GitHub\game-15\game-fifteen\GameFifteen.Tests\bin\Debug\PowerCollections.dll
+C:\Users\desty\Documents\GitHub\game-15\game-fifteen\GameFifteen.Tests\bin\Debug\GameFifteen.Common.pdb
+C:\Users\desty\Documents\GitHub\game-15\game-fifteen\GameFifteen.Tests\bin\Debug\GameFifteen.UI.pdb
+C:\Users\desty\Documents\GitHub\game-15\game-fifteen\GameFifteen.Tests\obj\Debug\GameFifteen.Tests.csprojResolveAssemblyReference.cache
+C:\Users\desty\Documents\GitHub\game-15\game-fifteen\GameFifteen.Tests\obj\Debug\GameFifteen.Tests.dll
+C:\Users\desty\Documents\GitHub\game-15\game-fifteen\GameFifteen.Tests\obj\Debug\GameFifteen.Tests.pdb
