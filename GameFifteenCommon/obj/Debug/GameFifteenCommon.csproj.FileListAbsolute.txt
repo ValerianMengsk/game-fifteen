@@ -18,3 +18,13 @@ C:\Users\Simeon\Documents\GitHub\game-fifteen\GameFifteenCommon\bin\Debug\GameFi
 C:\Users\Simeon\Documents\GitHub\game-fifteen\GameFifteenCommon\obj\Debug\GameFifteenCommon.csprojResolveAssemblyReference.cache
 C:\Users\Simeon\Documents\GitHub\game-fifteen\GameFifteenCommon\obj\Debug\GameFifteenCommon.dll
 C:\Users\Simeon\Documents\GitHub\game-fifteen\GameFifteenCommon\obj\Debug\GameFifteenCommon.pdb
+C:\Users\desty\Documents\GitHub\game-15\game-fifteen\GameFifteenCommon\bin\Debug\GameFifteenCommon.XML
+C:\Users\desty\Documents\GitHub\game-15\game-fifteen\GameFifteenCommon\bin\Debug\GameFifteenCommon.dll
+C:\Users\desty\Documents\GitHub\game-15\game-fifteen\GameFifteenCommon\bin\Debug\GameFifteenCommon.pdb
+C:\Users\desty\Documents\GitHub\game-15\game-fifteen\GameFifteenCommon\bin\Debug\GameFifteenUI.dll
+C:\Users\desty\Documents\GitHub\game-15\game-fifteen\GameFifteenCommon\bin\Debug\PowerCollections.dll
+C:\Users\desty\Documents\GitHub\game-15\game-fifteen\GameFifteenCommon\bin\Debug\GameFifteenUI.pdb
+C:\Users\desty\Documents\GitHub\game-15\game-fifteen\GameFifteenCommon\bin\Debug\GameFifteenUI.xml
+C:\Users\desty\Documents\GitHub\game-15\game-fifteen\GameFifteenCommon\obj\Debug\GameFifteenCommon.csprojResolveAssemblyReference.cache
+C:\Users\desty\Documents\GitHub\game-15\game-fifteen\GameFifteenCommon\obj\Debug\GameFifteenCommon.dll
+C:\Users\desty\Documents\GitHub\game-15\game-fifteen\GameFifteenCommon\obj\Debug\GameFifteenCommon.pdb
