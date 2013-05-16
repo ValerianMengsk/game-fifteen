@@ -20,7 +20,12 @@ namespace GameFifteen
         /// <summary>
         /// Place to keep the playfield.
         /// </summary>
-        private int[,] field;
+        private readonly int[,] field;
+
+        /// <summary>
+        /// Field that keeps solved matrix.
+        /// </summary>
+        private readonly int[,] matrix = null;
 
         /// <summary>
         /// Field that keeps a dictionary list for the numbers and their coordinates.
@@ -31,11 +36,6 @@ namespace GameFifteen
         /// Field that keeps matrix indexes
         /// </summary>
         private List<int> numbers = null;
-
-        /// <summary>
-        /// Field that keeps solved matrix.
-        /// </summary>
-        private int[,] matrix = null;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="Field" /> class.

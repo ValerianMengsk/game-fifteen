@@ -8,7 +8,7 @@ namespace GameFifteen
     /// <summary>
     /// Read and Write on the console.
     /// </summary>
-    public class ConsoleRenderer : IRenderer
+    public class ConsoleRenderer : IRendable
     {
         /// <summary>
         /// Display string on the console.

@@ -3,8 +3,6 @@
     using System;
     using GameFifteen;
     using Microsoft.VisualStudio.TestTools.UnitTesting;
-    using System.Text;
-    using System.IO;
 
     [TestClass]
     public class ScoreBoardTests
@@ -46,12 +44,12 @@
         }
 
         [TestMethod]
-        public void AddshortMaxValueNumberOfPlayersTest()
+        public void AddShortMaxValueNumberOfPlayersTest()
         {
             ScoreBoard scoreBoard = new ScoreBoard();
-            for (int i = 0; i < short.MaxValue; i++ )
+            for (int i = 0; i < short.MaxValue; i++)
             {
-                scoreBoard.Add( i.ToString(), 23);
+                scoreBoard.Add(i.ToString(), 23);
             }
         }
 
@@ -69,7 +67,7 @@
         public void AddEmptyNameToScoreBoard()
         {
             ScoreBoard scoreBoard = new ScoreBoard();
-            scoreBoard.Add(String.Empty, 23);
+            scoreBoard.Add(string.Empty, 23);
 
             Assert.AreEqual(scoreBoard.ToString(), "1. {Anonymous} --> 23 moves\r\n");
         }

@@ -145,13 +145,14 @@
     <violations />
   </sourcecode>
   <project key="-771903590">
-    <configuration>DEBUG;TRACE</configuration>
+    <configuration>
+    </configuration>
   </project>
   <sourcecode name="GameFifteen.cs" parser="StyleCop.CSharp.CsParser">
     <timestamps>
       <styleCop>2013.01.11 10:37:58.000</styleCop>
-      <settingsFile>2013.05.15 22:40:19.789</settingsFile>
-      <sourceFile>2013.05.15 22:55:20.593</sourceFile>
+      <settingsFile>2013.05.16 11:41:39.473</settingsFile>
+      <sourceFile>2013.05.16 11:41:39.463</sourceFile>
       <parser>2013.01.11 10:37:58.000</parser>
       <StyleCop.CSharp.DocumentationRules>2013.01.11 10:37:58.000</StyleCop.CSharp.DocumentationRules>
       <StyleCop.CSharp.DocumentationRules.FilesHashCode>-630970124</StyleCop.CSharp.DocumentationRules.FilesHashCode>

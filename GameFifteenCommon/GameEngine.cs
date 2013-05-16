@@ -29,17 +29,17 @@ namespace GameFifteen
         /// <summary>
         /// Singleton eager initialization.
         /// </summary>
-        private static GameEngine gameEngineInstance = new GameEngine();
+        private static readonly GameEngine GameEngineInstance = new GameEngine();
+
+        /// <summary>
+        /// Field that holds the console. It will handle input and output.
+        /// </summary>
+        private readonly IRendable console = null;
 
         /// <summary>
         /// Field that holds the gamefield.
         /// </summary>
         private Field gameField = null;
-
-        /// <summary>
-        /// Field that holds the console. It will handle input and output.
-        /// </summary>
-        private IRenderer console = null;
 
         /// <summary>
         /// Prevents a default instance of the <see cref="GameEngine" /> class from being created.
@@ -66,7 +66,7 @@ namespace GameFifteen
         /// <returns>The instance of the GameEngine.</returns>
         public static GameEngine StartGame()
         {
-            return gameEngineInstance;
+            return GameEngineInstance;
         }
 
         /// <summary>
@@ -139,16 +139,16 @@ namespace GameFifteen
                         this.StartNewGame();
                         break;
                     default:
-                        if (IsNumberMovable(inputCommand))
+                        if (this.IsNumberMovable(inputCommand))
                         {
-                            //if move is Valid then moves++!
-                            MoveNumber(int.Parse(inputCommand));
+                            this.MoveNumber(int.Parse(inputCommand));
                             moves++;
                         }
                         else
                         {
                             this.console.Display("Illegal command!");
                         }
+
                         break;
                 }
 
@@ -181,18 +181,18 @@ namespace GameFifteen
         /// Otherwise reports an error.
         /// </summary>
         /// <param name="inputNumber">Number to be moved.</param>
-        //private void MoveNumberIfValid(string inputNumber)
-        //{
-        //    int numberToMove = -1;
-        //    int.TryParse(inputNumber, out numberToMove);
-            
-        //    bool isNumberMoved = this.IsNumberMoved(numberToMove);
-
-        //    if (!isNumberMoved)
-        //    {
-        //        this.console.Display("Illegal command!");
-        //    }
-        //}
+        ////private void MoveNumberIfValid(string inputNumber)
+        ////{
+        ////    int numberToMove = -1;
+        ////    int.TryParse(inputNumber, out numberToMove);
+        //    
+        ////    bool isNumberMoved = this.IsNumberMoved(numberToMove);
+        //
+        ////    if (!isNumberMoved)
+        ////    {
+        ////        this.console.Display("Illegal command!");
+        ////    }
+        ////}
 
         /// <summary>
         /// Validates the passed index.
@@ -201,33 +201,33 @@ namespace GameFifteen
         /// </summary>
         /// <param name="index">Number index in numbers coords.</param>
         /// <returns>True if the number is moved and false otherwise.</returns>
-        //private bool IsNumberMoved(int index)
-        //{
-        //    bool inRange = (index > DownBound) && (index < UpBound);
-        //    bool numberMoved = true;
-
-        //    if (inRange)
-        //    {
-        //        var currCell = this.gameField.NumberCoords[0];
-        //        var cellToBeMoveTo = this.gameField.NumberCoords[index];
-        //        bool validNaighbours = this.CheckNeighbours(currCell, cellToBeMoveTo);
-
-        //        if (validNaighbours)
-        //        {
-        //            this.MoveNumber(index);
-        //        }
-        //        else
-        //        {
-        //            numberMoved = false;
-        //        }
-        //    }
-        //    else
-        //    {
-        //        numberMoved = false;
-        //    }
-
-        //    return numberMoved;
-        //}
+        ////private bool IsNumberMoved(int index)
+        ////{
+        ////    bool inRange = (index > DownBound) && (index < UpBound);
+        ////    bool numberMoved = true;
+        //
+        ////    if (inRange)
+        ////    {
+        ////        var currCell = this.gameField.NumberCoords[0];
+        ////        var cellToBeMoveTo = this.gameField.NumberCoords[index];
+        ////        bool validNaighbours = this.CheckNeighbours(currCell, cellToBeMoveTo);
+        //
+        ////        if (validNaighbours)
+        ////        {
+        ////            this.MoveNumber(index);
+        ////        }
+        ////        else
+        ////        {
+        ////            numberMoved = false;
+        ////        }
+        ////    }
+        ////    else
+        ////    {
+        ////        numberMoved = false;
+        ////    }
+        //
+        ////    return numberMoved;
+        ////}
 
         /// <summary>
         /// Validates the passed index.
@@ -237,18 +237,20 @@ namespace GameFifteen
         private bool IsNumberMovable(string inputNumber)
         {
             int numberToMove = -1;
+
             if (!int.TryParse(inputNumber, out numberToMove))
             {
                 return false;
             }
-            if( !( (numberToMove > DownBound) && (numberToMove < UpBound) ) )
+
+            if (!((numberToMove > DownBound) && (numberToMove < UpBound)))
             {
                 return false;
             }
 
             var currCell = this.gameField.NumberCoords[0];
             var cellToBeMoveTo = this.gameField.NumberCoords[numberToMove];
-            return CheckNeighbours(currCell, cellToBeMoveTo);
+            return this.CheckNeighbours(currCell, cellToBeMoveTo);
         }
 
         /// <summary>

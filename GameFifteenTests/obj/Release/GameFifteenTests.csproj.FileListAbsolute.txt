@@ -1,0 +1,12 @@
+C:\Users\Simeon\Documents\GitHub\game-fifteen\GameFifteenTests\bin\Release\GameFifteenTests.dll
+C:\Users\Simeon\Documents\GitHub\game-fifteen\GameFifteenTests\bin\Release\GameFifteenTests.pdb
+C:\Users\Simeon\Documents\GitHub\game-fifteen\GameFifteenTests\bin\Release\GameFifteen.exe
+C:\Users\Simeon\Documents\GitHub\game-fifteen\GameFifteenTests\bin\Release\GameFifteenCommon.dll
+C:\Users\Simeon\Documents\GitHub\game-fifteen\GameFifteenTests\bin\Release\GameFifteenUI.dll
+C:\Users\Simeon\Documents\GitHub\game-fifteen\GameFifteenTests\bin\Release\PowerCollections.dll
+C:\Users\Simeon\Documents\GitHub\game-fifteen\GameFifteenTests\bin\Release\GameFifteen.pdb
+C:\Users\Simeon\Documents\GitHub\game-fifteen\GameFifteenTests\bin\Release\GameFifteenCommon.pdb
+C:\Users\Simeon\Documents\GitHub\game-fifteen\GameFifteenTests\bin\Release\GameFifteenUI.pdb
+C:\Users\Simeon\Documents\GitHub\game-fifteen\GameFifteenTests\obj\Release\GameFifteenTests.csprojResolveAssemblyReference.cache
+C:\Users\Simeon\Documents\GitHub\game-fifteen\GameFifteenTests\obj\Release\GameFifteenTests.dll
+C:\Users\Simeon\Documents\GitHub\game-fifteen\GameFifteenTests\obj\Release\GameFifteenTests.pdb

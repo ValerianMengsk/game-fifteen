@@ -1,0 +1,8 @@
+C:\Users\Simeon\Documents\GitHub\game-fifteen\GameFifteenCommon\bin\Release\GameFifteenCommon.dll
+C:\Users\Simeon\Documents\GitHub\game-fifteen\GameFifteenCommon\bin\Release\GameFifteenCommon.pdb
+C:\Users\Simeon\Documents\GitHub\game-fifteen\GameFifteenCommon\bin\Release\GameFifteenUI.dll
+C:\Users\Simeon\Documents\GitHub\game-fifteen\GameFifteenCommon\bin\Release\PowerCollections.dll
+C:\Users\Simeon\Documents\GitHub\game-fifteen\GameFifteenCommon\bin\Release\GameFifteenUI.pdb
+C:\Users\Simeon\Documents\GitHub\game-fifteen\GameFifteenCommon\obj\Release\GameFifteenCommon.csprojResolveAssemblyReference.cache
+C:\Users\Simeon\Documents\GitHub\game-fifteen\GameFifteenCommon\obj\Release\GameFifteenCommon.dll
+C:\Users\Simeon\Documents\GitHub\game-fifteen\GameFifteenCommon\obj\Release\GameFifteenCommon.pdb

@@ -1,16 +1,11 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using GameFifteen;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Diagnostics;
-using System.IO;
-
-
-namespace GameFifteenTests
+﻿namespace GameFifteenTests
 {
+    using System;
+    using System.IO;
+    using System.Text;
+    using GameFifteen;
+    using Microsoft.VisualStudio.TestTools.UnitTesting;
+
     [TestClass]
     public class GameEngineTests
     {
@@ -18,6 +13,7 @@ namespace GameFifteenTests
         public void OveralGameTest()
         {
             StringBuilder stringBilder = new StringBuilder();
+
             for (long i = 1; i < 2000; i++)
             {
                 for (int j = 1; j < 17; j++)
@@ -26,6 +22,7 @@ namespace GameFifteenTests
                     stringBilder.Append("\n");
                 }
             }
+
             stringBilder.Append("exit");
             StreamReader reader = new StreamReader(
                 new MemoryStream(Encoding.ASCII.GetBytes(stringBilder.ToString())));

@@ -15,12 +15,12 @@ namespace GameFifteen
         /// <summary>
         /// OrderedMultiDictionary that keeps scores of the players.
         /// </summary>
-        private OrderedMultiDictionary<int, string> scoreBoard;
+        private readonly OrderedMultiDictionary<int, string> scoreBoard;
 
         /// <summary>
         /// Controler which will handle the input an output.
         /// </summary>
-        private IRenderer console = null;
+        private readonly IRendable console = null;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="ScoreBoard" /> class.

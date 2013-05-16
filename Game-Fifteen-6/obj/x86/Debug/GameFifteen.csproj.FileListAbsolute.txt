@@ -17,19 +17,6 @@ D:\others\GitHub\Test\Uni HW\game-fifteen\Game-Fifteen-6\bin\Debug\GameFifteenCo
 D:\others\GitHub\Test\Uni HW\game-fifteen\Game-Fifteen-6\bin\Debug\Game15.XML
 D:\others\GitHub\Test\Uni HW\game-fifteen\Game-Fifteen-6\bin\Debug\GameFifteenCommon.xml
 D:\others\GitHub\Test\Uni HW\game-fifteen\Game-Fifteen-6\bin\Debug\GameFifteenUI.xml
-C:\Users\Simeon\Documents\GitHub\game-fifteen\Game-Fifteen-6\bin\Debug\GameFifteenCommon.dll
-C:\Users\Simeon\Documents\GitHub\game-fifteen\Game-Fifteen-6\bin\Debug\GameFifteenUI.dll
-C:\Users\Simeon\Documents\GitHub\game-fifteen\Game-Fifteen-6\bin\Debug\GameFifteenCommon.pdb
-C:\Users\Simeon\Documents\GitHub\game-fifteen\Game-Fifteen-6\bin\Debug\GameFifteenCommon.xml
-C:\Users\Simeon\Documents\GitHub\game-fifteen\Game-Fifteen-6\bin\Debug\GameFifteenUI.pdb
-C:\Users\Simeon\Documents\GitHub\game-fifteen\Game-Fifteen-6\bin\Debug\GameFifteenUI.xml
-C:\Users\Simeon\Documents\GitHub\game-fifteen\Game-Fifteen-6\obj\x86\Debug\GameFifteen.csprojResolveAssemblyReference.cache
-C:\Users\Simeon\Documents\GitHub\game-fifteen\Game-Fifteen-6\bin\Debug\GameFifteen.exe.config
-C:\Users\Simeon\Documents\GitHub\game-fifteen\Game-Fifteen-6\bin\Debug\GameFifteen.xml
-C:\Users\Simeon\Documents\GitHub\game-fifteen\Game-Fifteen-6\bin\Debug\GameFifteen.exe
-C:\Users\Simeon\Documents\GitHub\game-fifteen\Game-Fifteen-6\bin\Debug\GameFifteen.pdb
-C:\Users\Simeon\Documents\GitHub\game-fifteen\Game-Fifteen-6\obj\x86\Debug\GameFifteen.exe
-C:\Users\Simeon\Documents\GitHub\game-fifteen\Game-Fifteen-6\obj\x86\Debug\GameFifteen.pdb
 C:\Users\desty\Documents\GitHub\game-15\game-fifteen\Game-Fifteen-6\bin\Debug\GameFifteen.exe.config
 C:\Users\desty\Documents\GitHub\game-15\game-fifteen\Game-Fifteen-6\bin\Debug\GameFifteen.xml
 C:\Users\desty\Documents\GitHub\game-15\game-fifteen\Game-Fifteen-6\bin\Debug\GameFifteen.exe
@@ -43,3 +30,25 @@ C:\Users\desty\Documents\GitHub\game-15\game-fifteen\Game-Fifteen-6\bin\Debug\Ga
 C:\Users\desty\Documents\GitHub\game-15\game-fifteen\Game-Fifteen-6\obj\x86\Debug\GameFifteen.csprojResolveAssemblyReference.cache
 C:\Users\desty\Documents\GitHub\game-15\game-fifteen\Game-Fifteen-6\obj\x86\Debug\GameFifteen.exe
 C:\Users\desty\Documents\GitHub\game-15\game-fifteen\Game-Fifteen-6\obj\x86\Debug\GameFifteen.pdb
+C:\Users\Simeon\Documents\GitHub\game-fifteen\Game-Fifteen-6\bin\Debug\GameFifteen.exe.config
+C:\Users\Simeon\Documents\GitHub\game-fifteen\Game-Fifteen-6\bin\Debug\GameFifteen.xml
+C:\Users\Simeon\Documents\GitHub\game-fifteen\Game-Fifteen-6\bin\Debug\GameFifteen.exe
+C:\Users\Simeon\Documents\GitHub\game-fifteen\Game-Fifteen-6\bin\Debug\GameFifteen.pdb
+C:\Users\Simeon\Documents\GitHub\game-fifteen\Game-Fifteen-6\bin\Debug\GameFifteenCommon.dll
+C:\Users\Simeon\Documents\GitHub\game-fifteen\Game-Fifteen-6\bin\Debug\GameFifteenUI.dll
+C:\Users\Simeon\Documents\GitHub\game-fifteen\Game-Fifteen-6\bin\Debug\GameFifteenCommon.pdb
+C:\Users\Simeon\Documents\GitHub\game-fifteen\Game-Fifteen-6\bin\Debug\GameFifteenCommon.xml
+C:\Users\Simeon\Documents\GitHub\game-fifteen\Game-Fifteen-6\bin\Debug\GameFifteenUI.pdb
+C:\Users\Simeon\Documents\GitHub\game-fifteen\Game-Fifteen-6\bin\Debug\GameFifteenUI.xml
+C:\Users\Simeon\Documents\GitHub\game-fifteen\Game-Fifteen-6\obj\x86\Debug\GameFifteen.csprojResolveAssemblyReference.cache
+C:\Users\Simeon\Documents\GitHub\game-fifteen\Game-Fifteen-6\obj\x86\Debug\GameFifteen.exe
+C:\Users\Simeon\Documents\GitHub\game-fifteen\Game-Fifteen-6\obj\x86\Debug\GameFifteen.pdb
+C:\Users\Simeon\Documents\GitHub\game-fifteen\Game-Fifteen-6\bin\x86\Debug\GameFifteen.exe.config
+C:\Users\Simeon\Documents\GitHub\game-fifteen\Game-Fifteen-6\bin\x86\Debug\GameFifteen.exe
+C:\Users\Simeon\Documents\GitHub\game-fifteen\Game-Fifteen-6\bin\x86\Debug\GameFifteen.pdb
+C:\Users\Simeon\Documents\GitHub\game-fifteen\Game-Fifteen-6\bin\x86\Debug\GameFifteenCommon.dll
+C:\Users\Simeon\Documents\GitHub\game-fifteen\Game-Fifteen-6\bin\x86\Debug\GameFifteenUI.dll
+C:\Users\Simeon\Documents\GitHub\game-fifteen\Game-Fifteen-6\bin\x86\Debug\GameFifteenCommon.pdb
+C:\Users\Simeon\Documents\GitHub\game-fifteen\Game-Fifteen-6\bin\x86\Debug\GameFifteenCommon.xml
+C:\Users\Simeon\Documents\GitHub\game-fifteen\Game-Fifteen-6\bin\x86\Debug\GameFifteenUI.pdb
+C:\Users\Simeon\Documents\GitHub\game-fifteen\Game-Fifteen-6\bin\x86\Debug\GameFifteenUI.xml

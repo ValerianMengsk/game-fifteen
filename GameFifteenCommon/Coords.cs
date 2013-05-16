@@ -14,7 +14,7 @@ namespace GameFifteen
         /// <summary>
         /// Field that holds number of dimensions as rows and cols.
         /// </summary>
-        private int dimensions;
+        private readonly int dimensions;
 
         /// <summary>
         /// Field that represents rows.

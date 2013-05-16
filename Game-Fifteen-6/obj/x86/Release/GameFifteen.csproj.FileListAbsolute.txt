@@ -1,0 +1,10 @@
+C:\Users\Simeon\Documents\GitHub\game-fifteen\Game-Fifteen-6\bin\Release\GameFifteen.exe.config
+C:\Users\Simeon\Documents\GitHub\game-fifteen\Game-Fifteen-6\bin\Release\GameFifteen.exe
+C:\Users\Simeon\Documents\GitHub\game-fifteen\Game-Fifteen-6\bin\Release\GameFifteen.pdb
+C:\Users\Simeon\Documents\GitHub\game-fifteen\Game-Fifteen-6\bin\Release\GameFifteenCommon.dll
+C:\Users\Simeon\Documents\GitHub\game-fifteen\Game-Fifteen-6\bin\Release\GameFifteenUI.dll
+C:\Users\Simeon\Documents\GitHub\game-fifteen\Game-Fifteen-6\bin\Release\GameFifteenCommon.pdb
+C:\Users\Simeon\Documents\GitHub\game-fifteen\Game-Fifteen-6\bin\Release\GameFifteenUI.pdb
+C:\Users\Simeon\Documents\GitHub\game-fifteen\Game-Fifteen-6\obj\x86\Release\GameFifteen.csprojResolveAssemblyReference.cache
+C:\Users\Simeon\Documents\GitHub\game-fifteen\Game-Fifteen-6\obj\x86\Release\GameFifteen.exe
+C:\Users\Simeon\Documents\GitHub\game-fifteen\Game-Fifteen-6\obj\x86\Release\GameFifteen.pdb
