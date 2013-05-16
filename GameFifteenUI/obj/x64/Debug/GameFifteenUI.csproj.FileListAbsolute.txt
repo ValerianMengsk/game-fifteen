@@ -1,0 +1,5 @@
+C:\Users\Simeon\Documents\GitHub\game-fifteen\GameFifteenUI\bin\x64\Debug\GameFifteenUI.dll
+C:\Users\Simeon\Documents\GitHub\game-fifteen\GameFifteenUI\bin\x64\Debug\GameFifteenUI.pdb
+C:\Users\Simeon\Documents\GitHub\game-fifteen\GameFifteenUI\bin\x64\Debug\GameFifteenUI.XML
+C:\Users\Simeon\Documents\GitHub\game-fifteen\GameFifteenUI\obj\x64\Debug\GameFifteenUI.dll
+C:\Users\Simeon\Documents\GitHub\game-fifteen\GameFifteenUI\obj\x64\Debug\GameFifteenUI.pdb

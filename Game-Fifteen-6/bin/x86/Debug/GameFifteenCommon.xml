@@ -64,6 +64,11 @@
             Place to keep the playfield.
             </summary>
         </member>
+        <member name="F:GameFifteen.Field.matrix">
+            <summary>
+            Field that keeps solved matrix.
+            </summary>
+        </member>
         <member name="F:GameFifteen.Field.numberCoords">
             <summary>
             Field that keeps a dictionary list for the numbers and their coordinates.
@@ -72,11 +77,6 @@
         <member name="F:GameFifteen.Field.numbers">
             <summary>
             Field that keeps matrix indexes
-            </summary>
-        </member>
-        <member name="F:GameFifteen.Field.matrix">
-            <summary>
-            Field that keeps solved matrix.
             </summary>
         </member>
         <member name="M:GameFifteen.Field.#ctor(System.Int32)">
@@ -160,19 +160,19 @@
             Constant for the field dimentions.
             </summary>
         </member>
-        <member name="F:GameFifteen.GameEngine.gameEngineInstance">
+        <member name="F:GameFifteen.GameEngine.GameEngineInstance">
             <summary>
             Singleton eager initialization.
-            </summary>
-        </member>
-        <member name="F:GameFifteen.GameEngine.gameField">
-            <summary>
-            Field that holds the gamefield.
             </summary>
         </member>
         <member name="F:GameFifteen.GameEngine.console">
             <summary>
             Field that holds the console. It will handle input and output.
+            </summary>
+        </member>
+        <member name="F:GameFifteen.GameEngine.gameField">
+            <summary>
+            Field that holds the gamefield.
             </summary>
         </member>
         <member name="M:GameFifteen.GameEngine.#ctor">

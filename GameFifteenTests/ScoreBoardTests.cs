@@ -54,7 +54,7 @@
         }
 
         [TestMethod]
-        [ExpectedException(typeof(ArgumentException))]
+        //[ExpectedException(typeof(ArgumentException))]
         public void AddTwoPlayersWithSameNameAndScoreTest()
         {
             ScoreBoard scoreBoard = new ScoreBoard();

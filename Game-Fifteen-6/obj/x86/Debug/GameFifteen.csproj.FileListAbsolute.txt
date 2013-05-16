@@ -52,3 +52,5 @@ C:\Users\Simeon\Documents\GitHub\game-fifteen\Game-Fifteen-6\bin\x86\Debug\GameF
 C:\Users\Simeon\Documents\GitHub\game-fifteen\Game-Fifteen-6\bin\x86\Debug\GameFifteenCommon.xml
 C:\Users\Simeon\Documents\GitHub\game-fifteen\Game-Fifteen-6\bin\x86\Debug\GameFifteenUI.pdb
 C:\Users\Simeon\Documents\GitHub\game-fifteen\Game-Fifteen-6\bin\x86\Debug\GameFifteenUI.xml
+C:\Users\Simeon\Documents\GitHub\game-fifteen\Game-Fifteen-6\bin\x86\Debug\GameFifteen.exe.CodeAnalysisLog.xml
+C:\Users\Simeon\Documents\GitHub\game-fifteen\Game-Fifteen-6\bin\x86\Debug\GameFifteen.exe.lastcodeanalysissucceeded
