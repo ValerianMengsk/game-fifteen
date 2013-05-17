@@ -4,7 +4,6 @@ namespace GameFifteenCommon
 {
     using System;
     using System.Linq;
-    using System.Text;
     using Wintellect.PowerCollections;
 
     /// <summary>
@@ -15,7 +14,7 @@ namespace GameFifteenCommon
         /// <summary>
         /// OrderedMultiDictionary that keeps scores of the players.
         /// </summary>
-        private OrderedMultiDictionary<int, string> scores;
+        private readonly OrderedMultiDictionary<int, string> scores;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="Count" /> class.
