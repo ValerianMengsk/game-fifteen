@@ -7,6 +7,7 @@
     using System.Text;
     using System.Threading.Tasks;
     using Wintellect.PowerCollections;
+
     /// <summary>
     /// Read and Write on the console.
     /// </summary>
@@ -43,23 +44,23 @@
         }
 
         /// <summary>
-        /// 
+        /// not implemented.
         /// </summary>
         public void PrintField(IList<int> field)
         {
             
         }
+
         /// <summary>
-        /// 
+        /// not implemented.
         /// </summary>
-        /// 
         public void PrintScoreboard(OrderedMultiDictionary<int, string> scores)
         {
             
         }
 
         /// <summary>
-        /// 
+        /// not implemented.
         /// </summary>
         public void StartupMessage()
         {

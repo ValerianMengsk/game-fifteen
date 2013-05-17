@@ -19,3 +19,5 @@ C:\Users\rosss\Documents\GitHub\game-fifteen\GameFifteen.UI\bin\Debug\GameFiftee
 C:\Users\rosss\Documents\GitHub\game-fifteen\GameFifteen.UI\bin\Debug\GameFifteen.Common.dll
 C:\Users\rosss\Documents\GitHub\game-fifteen\GameFifteen.UI\bin\Debug\GameFifteen.Common.pdb
 C:\Users\rosss\Documents\GitHub\game-fifteen\GameFifteen.UI\obj\Debug\GameFifteenUI.csprojResolveAssemblyReference.cache
+D:\others\GitHub\Test\Uni HW\game-fifteen\GameFifteen.UI\bin\Debug\GameFifteen.UI.XML
+D:\others\GitHub\Test\Uni HW\game-fifteen\GameFifteen.UI\bin\Debug\GameFifteen.Common.xml

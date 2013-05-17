@@ -163,6 +163,7 @@
             {
                 render.Write("Invalid Command");
             }
+
             return moves;
         }
 

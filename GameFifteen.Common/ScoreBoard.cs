@@ -18,20 +18,20 @@ namespace GameFifteenCommon
         private OrderedMultiDictionary<int, string> scores;
 
         /// <summary>
+        /// Initializes a new instance of the <see cref="Count" /> class.
+        /// </summary>
+        public ScoreBoard()
+        {
+            this.scores = new OrderedMultiDictionary<int, string>(true);
+        }
+
+        /// <summary>
         /// Makes string that represents the score board.
         /// </summary>
         /// <returns>Score board as string.</returns>
         public OrderedMultiDictionary<int, string> Scores()
         {
             return scores;
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="Count" /> class.
-        /// </summary>
-        public ScoreBoard()
-        {
-            this.scores = new OrderedMultiDictionary<int, string>(true);
         }
 
         /// <summary>

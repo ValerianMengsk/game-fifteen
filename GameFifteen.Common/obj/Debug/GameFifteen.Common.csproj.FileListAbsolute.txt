@@ -22,3 +22,4 @@ C:\Users\rosss\Documents\GitHub\game-fifteen\GameFifteen.Common\bin\Debug\PowerC
 C:\Users\rosss\Documents\GitHub\game-fifteen\GameFifteen.Common\obj\Debug\GameFifteen.Common.csprojResolveAssemblyReference.cache
 C:\Users\rosss\Documents\GitHub\game-fifteen\GameFifteen.Common\obj\Debug\GameFifteen.Common.dll
 C:\Users\rosss\Documents\GitHub\game-fifteen\GameFifteen.Common\obj\Debug\GameFifteen.Common.pdb
+D:\others\GitHub\Test\Uni HW\game-fifteen\GameFifteen.Common\bin\Debug\GameFifteen.Common.XML

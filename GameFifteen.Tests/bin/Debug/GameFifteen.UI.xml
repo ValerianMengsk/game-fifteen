@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>GameFifteen.UI</name>
+    </assembly>
+    <members>
+        <member name="T:GameFifteenUI.ConsoleRenderer">
+            <summary>
+            Read and Write on the console.
+            </summary>
+        </member>
+        <member name="M:GameFifteenUI.ConsoleRenderer.Write(System.String)">
+            <summary>
+            Display string on the console.
+            </summary>
+            <param name="toDisplay">String that will be printed on the console.</param>
+        </member>
+        <member name="M:GameFifteenUI.ConsoleRenderer.Read(System.String)">
+            <summary>
+            Show message on the console telling the user what we expect him to entere.
+            Reading the user input.
+            </summary>
+            <param name="message">Message to be printed when asking for input.</param>
+            <returns>Input data.</returns>
+        </member>
+        <member name="M:GameFifteenUI.ConsoleRenderer.PrintField(System.Collections.Generic.IList{System.Int32})">
+            <summary>
+            Printing game field, i.e. all numbers from 1 to 15
+            on the console!
+            </summary>
+            <param name="field">List with numbers' fields</param>
+        </member>
+        <member name="M:GameFifteenUI.ConsoleRenderer.PrintScoreboard(Wintellect.PowerCollections.OrderedMultiDictionary{System.Int32,System.String})">
+            <summary>
+            Printing current score board on the console!
+            </summary>
+            <param name="scores">scores in orderedMultiDictionary format </param>
+        </member>
+        <member name="M:GameFifteenUI.ConsoleRenderer.StartupMessage">
+            <summary>
+            Print Startup Message on the Console!
+            </summary>
+        </member>
+        <member name="T:GameFifteenUI.GameFifteen">
+            <summary>
+            Main class of the game.
+            Just starts the game through the game engine.
+            </summary>
+        </member>
+    </members>
+</doc>

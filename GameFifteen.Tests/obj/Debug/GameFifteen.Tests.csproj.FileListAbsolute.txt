@@ -48,3 +48,5 @@ C:\Users\rosss\Documents\GitHub\game-fifteen\GameFifteen.Tests\bin\Debug\GameFif
 C:\Users\rosss\Documents\GitHub\game-fifteen\GameFifteen.Tests\obj\Debug\GameFifteen.Tests.csprojResolveAssemblyReference.cache
 C:\Users\rosss\Documents\GitHub\game-fifteen\GameFifteen.Tests\obj\Debug\GameFifteen.Tests.dll
 C:\Users\rosss\Documents\GitHub\game-fifteen\GameFifteen.Tests\obj\Debug\GameFifteen.Tests.pdb
+D:\others\GitHub\Test\Uni HW\game-fifteen\GameFifteen.Tests\bin\Debug\GameFifteen.Common.xml
+D:\others\GitHub\Test\Uni HW\game-fifteen\GameFifteen.Tests\bin\Debug\GameFifteen.UI.xml

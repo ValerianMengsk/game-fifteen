@@ -60,11 +60,13 @@ namespace GameFifteenUI
                     {
                         fieldAsString.AppendFormat(" {0,2} |", field[count]);
                     }
+
                     count++;
                 }
 
                 fieldAsString.AppendLine();
             }
+
             fieldAsString.Append(' ' + new string('-', 19));
             Console.WriteLine(fieldAsString.ToString());
         }

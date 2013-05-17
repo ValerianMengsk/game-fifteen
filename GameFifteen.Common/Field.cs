@@ -36,9 +36,13 @@ namespace GameFifteenCommon
         /// Field that keeps matrix indeces
         /// </summary>
         private List<int> numbers = null;
+
         public int Dimensions
         {
-            get { return dimensions; }
+            get 
+            { 
+                return dimensions; 
+            }
         }
 
         /// <summary>
@@ -141,6 +145,20 @@ namespace GameFifteenCommon
             }
         }
 
+        public IList<int> GetFieldNumbers()
+        {
+            List<int> FieldNumbers = new List<int>();
+            for (int row = 0; row < Dimensions; row++)
+            {
+                for (int col = 0; col < Dimensions; col++)
+                {
+                    FieldNumbers.Add(field[row, col]);
+                }
+            }
+
+            return FieldNumbers;
+        }
+
         /// <summary>
         /// Generating list of numbers, representing matrix indexes
         /// </summary>
@@ -152,6 +170,7 @@ namespace GameFifteenCommon
             {
                 numbers.Add(currNumber);
             }
+
             return numbers;
         }
 
@@ -202,19 +221,6 @@ namespace GameFifteenCommon
             {
                 throw new IndexOutOfRangeException("The dimensions you have provided are out of range!");
             }
-        }
-
-        public IList<int> GetFieldNumbers()
-        {
-            List<int> FieldNumbers = new List<int>();
-            for (int row = 0; row < Dimensions; row++)
-            {
-                for (int col = 0; col < Dimensions; col++)
-                {
-                    FieldNumbers.Add(field[row, col]);
-                }
-            }
-            return FieldNumbers;
         }
     }
 }
