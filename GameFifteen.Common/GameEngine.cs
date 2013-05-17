@@ -65,18 +65,21 @@ namespace GameFifteenCommon
         /// <summary>
         /// Method that starts the new game, when it was just loaded or restarted. 
         /// </summary>
-        private void StartNewGame(IRenderable renderer)
+        private void StartNewGame(IRenderable renderer, bool running = false)
         {
             this.gameField = new Field(Dimentions);
             renderer.Write(Messages.StartupMessage());
+
+            if (!running)
+            {
+                this.BeginGame(renderer);
+            }
 
             do
             {
                 this.gameField.GetRandomField();
             }
             while (this.gameField.IsSolved());
-
-            this.BeginGame(renderer);
         }
 
         /// <summary>
@@ -130,6 +133,13 @@ namespace GameFifteenCommon
                         }
 
                     case "restart":
+<<<<<<< HEAD
+=======
+                        this.StartNewGame(render, true);
+                        break;
+                    default:
+                        if (this.IsNumberMovable(inputCommand))
+>>>>>>> bug fix, code update.
                         {
                             this.StartNewGame(render);
                             break;
@@ -168,6 +178,10 @@ namespace GameFifteenCommon
             }
         }
 
+        /// <summary>
+        /// Adds user to scoreboard, asking his name and getting his score.
+        /// </summary>
+        /// <param name="score">Number of moves.</param>
         private void AddUserToScoreBoard(ScoreBoard scoreBoard, int score, IRenderable render)
         {
             string name = render.Read("Please enter your name for the top scoreboard: ");

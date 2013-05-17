@@ -25,8 +25,14 @@ namespace GameFifteenCommon
         /// <returns>String entered by player.</returns>
         string Read(string message);
 
-        void PrintField(IList<int> field);
+        /// <summary>
+        /// Responsible for visualizing the game field.
+        /// </summary>
+        void PrintField(IList<int> fieldNumbers);
 
+        /// <summary>
+        /// Responsible for visualizing the score board.
+        /// </summary>
         void PrintScoreboard(OrderedMultiDictionary<int, string> scores);
     }
 }

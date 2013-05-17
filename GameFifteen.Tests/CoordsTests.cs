@@ -1,6 +1,10 @@
 ﻿namespace GameFifteen.Tests
 {
     using System;
+<<<<<<< HEAD
+=======
+    using Microsoft.VisualStudio.TestTools.UnitTesting;
+>>>>>>> bug fix, code update.
     using GameFifteenCommon;
     using Microsoft.VisualStudio.TestTools.UnitTesting;
 

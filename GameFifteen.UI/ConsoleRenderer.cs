@@ -35,9 +35,12 @@ namespace GameFifteenUI
             return Console.ReadLine();
         }
 
-        public void PrintField(IList<int> field)
+        /// <summary>
+        /// Method that displays the field on the console
+        /// </summary>
+        public void PrintField(IList<int> fieldNumbers)
         {
-            int dimensions = (int)Math.Sqrt(field.Count);
+            int dimensions = (int)Math.Sqrt(fieldNumbers.Count);
             int count = 0;
             StringBuilder fieldAsString = new StringBuilder();
 
@@ -47,13 +50,13 @@ namespace GameFifteenUI
                 fieldAsString.Append("|");
                 for (int col = 0; col < dimensions; col++)
                 {
-                    if (field[count] == 0)
+                    if (fieldNumbers[count] == 0)
                     {
                         fieldAsString.Append("    |");
                     }
                     else
                     {
-                        fieldAsString.AppendFormat(" {0,2} |", field[count]);
+                        fieldAsString.AppendFormat(" {0,2} |", fieldNumbers[count]);
                     }
 
                     count++;
@@ -66,6 +69,9 @@ namespace GameFifteenUI
             Console.WriteLine(fieldAsString.ToString());
         }
 
+        /// <summary>
+        /// Method that displays the scoreboard on the console.
+        /// </summary>
         public void PrintScoreboard(OrderedMultiDictionary<int, string> scores)
         {
             if (scores.Count == 0)
@@ -92,4 +98,8 @@ namespace GameFifteenUI
             }
         }
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> bug fix, code update.

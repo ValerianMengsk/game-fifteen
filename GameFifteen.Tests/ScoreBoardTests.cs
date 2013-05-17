@@ -1,8 +1,13 @@
 ﻿namespace GameFifteen.Tests
 {
     using System;
+<<<<<<< HEAD
     using GameFifteenCommon;
     using Microsoft.VisualStudio.TestTools.UnitTesting;
+=======
+    using Microsoft.VisualStudio.TestTools.UnitTesting;
+    using GameFifteenCommon;
+>>>>>>> bug fix, code update.
 
     [TestClass]
     public class ScoreBoardTests

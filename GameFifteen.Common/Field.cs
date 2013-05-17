@@ -199,10 +199,16 @@ namespace GameFifteenCommon
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Generate solved matrix for specified dimensions.
         /// </summary>
         //// TODO: Fix this - one is List, and other is [,]..
         private int[,] GenerateSolvedMatrix()
+=======
+        /// Generates all valid field numbers, in respect to the dimentions.
+        /// </summary>
+        public IList<int> GetFieldNumbers()
+>>>>>>> bug fix, code update.
         {
             int[,] solvedMatrix = new int[this.dimensions, this.dimensions];
             int currNumber = 1;

@@ -24,8 +24,12 @@ namespace GameFifteenCommon
             this.scores = new OrderedMultiDictionary<int, string>(true);
         }
 
+        /// <summary>
+        /// Holds the number of scores.
+        /// </summary>
         public int Count
         {
+<<<<<<< HEAD
             get { return this.scores.Count; }
         }
 
@@ -36,6 +40,12 @@ namespace GameFifteenCommon
         public OrderedMultiDictionary<int, string> Scores()
         {
             return this.scores;
+=======
+            get 
+            { 
+                return scores.Count; 
+            }
+>>>>>>> bug fix, code update.
         }
 
         /// <summary>
