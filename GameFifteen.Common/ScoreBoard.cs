@@ -34,6 +34,9 @@ namespace GameFifteenCommon
             this.scores = new OrderedMultiDictionary<int, string>(true);
         }
 
+        /// <summary>
+        /// Initializes the count field <see cref="count" />
+        /// </summary>
         public int Count
         {
             get { return scores.Count; }

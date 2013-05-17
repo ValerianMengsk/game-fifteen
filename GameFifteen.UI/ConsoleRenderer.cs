@@ -35,6 +35,11 @@ namespace GameFifteenUI
             return Console.ReadLine();
         }
 
+        /// <summary>
+        /// Printing game field, i.e. all numbers from 1 to 15
+        /// on the console!
+        /// </summary>
+        /// <param name="field">List with numbers' fields</param>
         public void PrintField(IList<int> field)
         {
             int dimensions = (int)Math.Sqrt(field.Count);
@@ -64,6 +69,10 @@ namespace GameFifteenUI
             Console.WriteLine(fieldAsString.ToString());
         }
 
+        /// <summary>
+        /// Printing current score board on the console!
+        /// </summary>
+        /// <param name="scores">scores in orderedMultiDictionary format </param>
         public void PrintScoreboard(OrderedMultiDictionary<int, string> scores)
         {
             if (scores.Count == 0)
@@ -88,6 +97,22 @@ namespace GameFifteenUI
                     position++;
                 }
             }
+        }
+
+        /// <summary>
+        /// Print Startup Message on the Console!
+        /// </summary>
+        public void StartupMessage()
+        {
+            StringBuilder startupMessage = new StringBuilder();
+
+            startupMessage.AppendLine("\r\nWelcome to the game “15”.");
+            startupMessage.AppendLine("Please try to arrange the numbers sequentially.");
+            startupMessage.AppendLine("Use 'top' to view the top scoreboard.");
+            startupMessage.AppendLine("Use 'restart' to start a new game.");
+            startupMessage.AppendLine("Use 'exit' to quit the game.");
+
+            this.Write(startupMessage.ToString());
         }
     }
 }

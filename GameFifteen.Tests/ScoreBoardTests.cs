@@ -4,7 +4,7 @@
     using GameFifteen;
     using Microsoft.VisualStudio.TestTools.UnitTesting;
     using GameFifteenCommon;
-
+    using Wintellect.PowerCollections;
     [TestClass]
     public class ScoreBoardTests
     {
@@ -12,8 +12,9 @@
         public void InitializeEmptyScoreBoardTest()
         {
             ScoreBoard scoreBoard = new ScoreBoard();
-
-            Assert.IsTrue(scoreBoard.ToString() == "Scoreboard is empty.");
+            string str = scoreBoard.Scores().Values.ToString();
+            str += scoreBoard.Scores().Keys.ToString();
+            Assert.IsTrue(str == "{}{}");
         }
 
         [TestMethod]
@@ -24,8 +25,10 @@
             scoreBoard.Add("Pesho", 23);
             scoreBoard.Add("Gosho", 13);
             scoreBoard.Add("Tosho", 17);
+            string str = scoreBoard.Scores().Values.ToString();
+            str += scoreBoard.Scores().Keys.ToString();
 
-            Assert.AreEqual(scoreBoard.ToString(), "1. {Gosho} --> 13 moves\r\n2. {Tosho} --> 17 moves\r\n3. {Pesho} --> 23 moves\r\n");
+            Assert.AreEqual(str, "{Gosho,Tosho,Pesho}{13,17,23}");
         }
 
         [TestMethod]
@@ -41,7 +44,9 @@
             scoreBoard.Add("Mimi", 12);
             scoreBoard.Add("Tosho", 10);
 
-            Assert.AreEqual(scoreBoard.ToString(), "1. {Tosho} --> 10 moves\r\n2. {Mimi} --> 12 moves\r\n3. {Gosho} --> 13 moves\r\n4. {Stamat} --> 14 moves\r\n5. {Kiro} --> 17 moves\r\n");
+            string str = scoreBoard.Scores().Values.ToString();
+            str += scoreBoard.Scores().Keys.ToString();
+            Assert.AreEqual(str, "{Tosho,Mimi,Gosho,Stamat,Kiro,Ivan,Pesho}{10,12,13,14,17,18,23}");
         }
 
         [TestMethod]
@@ -70,7 +75,9 @@
             ScoreBoard scoreBoard = new ScoreBoard();
             scoreBoard.Add(string.Empty, 23);
 
-            Assert.AreEqual(scoreBoard.ToString(), "1. {Anonymous} --> 23 moves\r\n");
+            string str = scoreBoard.Scores().Values.ToString();
+            str += scoreBoard.Scores().Keys.ToString();
+            Assert.AreEqual(str, "{Anonymous}{23}");
         }
 
         [TestMethod]

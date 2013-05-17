@@ -33,14 +33,14 @@ namespace GameFifteenCommon
         private Dictionary<int, Coords> numberCoords;
 
         /// <summary>
-        /// Field that keeps matrix indexes
+        /// Field that keeps matrix indeces
         /// </summary>
         private List<int> numbers = null;
-
         public int Dimensions
         {
             get { return dimensions; }
         }
+
         /// <summary>
         /// Initializes a new instance of the <see cref="Field" /> class.
         /// Constructor that initializes and fills the field with numbers.
@@ -158,7 +158,6 @@ namespace GameFifteenCommon
         /// <summary>
         /// Generate solved matrix for specified dimensions.
         /// </summary>
-        // TODO: Fix this - one is List, and other is [,]..
         private int[,] GenerateSolvedMatrix()
         {
             int[,] solvedMatrix = new int[this.dimensions, this.dimensions];

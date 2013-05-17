@@ -12,3 +12,10 @@ D:\others\telerik HW\TeamWorkKPK\gamefifteen\GameFifteen.UI\bin\Debug\GameFiftee
 D:\others\telerik HW\TeamWorkKPK\gamefifteen\GameFifteen.UI\bin\Debug\GameFifteen.Common.dll
 D:\others\telerik HW\TeamWorkKPK\gamefifteen\GameFifteen.UI\bin\Debug\GameFifteen.Common.pdb
 D:\others\telerik HW\TeamWorkKPK\gamefifteen\GameFifteen.UI\obj\Debug\GameFifteenUI.csprojResolveAssemblyReference.cache
+C:\Users\rosss\Documents\GitHub\game-fifteen\GameFifteen.UI\obj\Debug\GameFifteen.UI.exe
+C:\Users\rosss\Documents\GitHub\game-fifteen\GameFifteen.UI\obj\Debug\GameFifteen.UI.pdb
+C:\Users\rosss\Documents\GitHub\game-fifteen\GameFifteen.UI\bin\Debug\GameFifteen.UI.exe
+C:\Users\rosss\Documents\GitHub\game-fifteen\GameFifteen.UI\bin\Debug\GameFifteen.UI.pdb
+C:\Users\rosss\Documents\GitHub\game-fifteen\GameFifteen.UI\bin\Debug\GameFifteen.Common.dll
+C:\Users\rosss\Documents\GitHub\game-fifteen\GameFifteen.UI\bin\Debug\GameFifteen.Common.pdb
+C:\Users\rosss\Documents\GitHub\game-fifteen\GameFifteen.UI\obj\Debug\GameFifteenUI.csprojResolveAssemblyReference.cache

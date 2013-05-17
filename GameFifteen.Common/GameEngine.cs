@@ -66,7 +66,7 @@
         private void StartNewGame(IRenderable renderer, bool running = false)
         {
             this.gameField = new Field(Dimentions);
-            renderer.Write(Messages.StartupMessage());
+            renderer.StartupMessage();
 
             if (!running)
             {
@@ -131,19 +131,8 @@
                         this.StartNewGame(render, true);
                         break;
                     default:
-                        {
-                            if (this.IsNumberMovable(inputCommand))
-                            {
-                                this.MoveNumber(int.Parse(inputCommand));
-                                moves++;
-                            }
-                            else
-                            {
-                                render.Write("Invalid Command");
-                            }
-
-                            break;
-                        }
+                        moves = MoveNumberIfValid(render, moves, inputCommand);
+                        break;
                 }
 
                 render.PrintField(this.gameField.GetFieldNumbers());
@@ -161,6 +150,20 @@
 
                 inputCommand = render.Read("give me command: ").Trim();
             }
+        }
+
+        private int MoveNumberIfValid(IRenderable render, int moves, string inputCommand)
+        {
+            if (this.IsNumberMovable(inputCommand))
+            {
+                this.MoveNumber(int.Parse(inputCommand));
+                moves++;
+            }
+            else
+            {
+                render.Write("Invalid Command");
+            }
+            return moves;
         }
 
         /// <summary>

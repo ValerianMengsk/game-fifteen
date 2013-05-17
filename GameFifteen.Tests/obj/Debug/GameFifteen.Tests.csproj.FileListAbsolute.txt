@@ -38,3 +38,13 @@ D:\others\telerik HW\TeamWorkKPK\gamefifteen\GameFifteen.Tests\bin\Debug\GameFif
 D:\others\telerik HW\TeamWorkKPK\gamefifteen\GameFifteen.Tests\obj\Debug\GameFifteen.Tests.csprojResolveAssemblyReference.cache
 D:\others\telerik HW\TeamWorkKPK\gamefifteen\GameFifteen.Tests\obj\Debug\GameFifteen.Tests.dll
 D:\others\telerik HW\TeamWorkKPK\gamefifteen\GameFifteen.Tests\obj\Debug\GameFifteen.Tests.pdb
+C:\Users\rosss\Documents\GitHub\game-fifteen\GameFifteen.Tests\bin\Debug\GameFifteen.Tests.dll
+C:\Users\rosss\Documents\GitHub\game-fifteen\GameFifteen.Tests\bin\Debug\GameFifteen.Tests.pdb
+C:\Users\rosss\Documents\GitHub\game-fifteen\GameFifteen.Tests\bin\Debug\GameFifteen.Common.dll
+C:\Users\rosss\Documents\GitHub\game-fifteen\GameFifteen.Tests\bin\Debug\GameFifteen.UI.exe
+C:\Users\rosss\Documents\GitHub\game-fifteen\GameFifteen.Tests\bin\Debug\PowerCollections.dll
+C:\Users\rosss\Documents\GitHub\game-fifteen\GameFifteen.Tests\bin\Debug\GameFifteen.Common.pdb
+C:\Users\rosss\Documents\GitHub\game-fifteen\GameFifteen.Tests\bin\Debug\GameFifteen.UI.pdb
+C:\Users\rosss\Documents\GitHub\game-fifteen\GameFifteen.Tests\obj\Debug\GameFifteen.Tests.csprojResolveAssemblyReference.cache
+C:\Users\rosss\Documents\GitHub\game-fifteen\GameFifteen.Tests\obj\Debug\GameFifteen.Tests.dll
+C:\Users\rosss\Documents\GitHub\game-fifteen\GameFifteen.Tests\obj\Debug\GameFifteen.Tests.pdb
