@@ -5,17 +5,10 @@ D:\others\GitHub\Test\Uni HW\game-fifteen\GameFifteen.UI\bin\Debug\GameFifteen.U
 D:\others\GitHub\Test\Uni HW\game-fifteen\GameFifteen.UI\bin\Debug\GameFifteen.Common.dll
 D:\others\GitHub\Test\Uni HW\game-fifteen\GameFifteen.UI\bin\Debug\GameFifteen.Common.pdb
 D:\others\GitHub\Test\Uni HW\game-fifteen\GameFifteen.UI\obj\Debug\GameFifteenUI.csprojResolveAssemblyReference.cache
-C:\Users\desty\Documents\GitHub\game-15\game-fifteen\GameFifteen.UI\obj\Debug\GameFifteenUI.csprojResolveAssemblyReference.cache
-C:\Users\desty\Documents\GitHub\game-15\game-fifteen\GameFifteen.UI\obj\Debug\GameFifteen.UI.exe
-C:\Users\desty\Documents\GitHub\game-15\game-fifteen\GameFifteen.UI\obj\Debug\GameFifteen.UI.pdb
-C:\Users\desty\Documents\GitHub\game-15\game-fifteen\GameFifteen.UI\bin\Debug\GameFifteen.UI.exe
-C:\Users\desty\Documents\GitHub\game-15\game-fifteen\GameFifteen.UI\bin\Debug\GameFifteen.UI.pdb
-C:\Users\desty\Documents\GitHub\game-15\game-fifteen\GameFifteen.UI\bin\Debug\GameFifteen.Common.dll
-C:\Users\desty\Documents\GitHub\game-15\game-fifteen\GameFifteen.UI\bin\Debug\GameFifteen.Common.pdb
-C:\Users\Simeon\Documents\GitHub\game-fifteen\GameFifteen.UI\obj\Debug\GameFifteen.UI.exe
-C:\Users\Simeon\Documents\GitHub\game-fifteen\GameFifteen.UI\obj\Debug\GameFifteen.UI.pdb
-C:\Users\Simeon\Documents\GitHub\game-fifteen\GameFifteen.UI\bin\Debug\GameFifteen.UI.exe
-C:\Users\Simeon\Documents\GitHub\game-fifteen\GameFifteen.UI\bin\Debug\GameFifteen.UI.pdb
-C:\Users\Simeon\Documents\GitHub\game-fifteen\GameFifteen.UI\bin\Debug\GameFifteen.Common.dll
-C:\Users\Simeon\Documents\GitHub\game-fifteen\GameFifteen.UI\bin\Debug\GameFifteen.Common.pdb
-C:\Users\Simeon\Documents\GitHub\game-fifteen\GameFifteen.UI\obj\Debug\GameFifteenUI.csprojResolveAssemblyReference.cache
+D:\others\telerik HW\TeamWorkKPK\gamefifteen\GameFifteen.UI\obj\Debug\GameFifteen.UI.exe
+D:\others\telerik HW\TeamWorkKPK\gamefifteen\GameFifteen.UI\obj\Debug\GameFifteen.UI.pdb
+D:\others\telerik HW\TeamWorkKPK\gamefifteen\GameFifteen.UI\bin\Debug\GameFifteen.UI.exe
+D:\others\telerik HW\TeamWorkKPK\gamefifteen\GameFifteen.UI\bin\Debug\GameFifteen.UI.pdb
+D:\others\telerik HW\TeamWorkKPK\gamefifteen\GameFifteen.UI\bin\Debug\GameFifteen.Common.dll
+D:\others\telerik HW\TeamWorkKPK\gamefifteen\GameFifteen.UI\bin\Debug\GameFifteen.Common.pdb
+D:\others\telerik HW\TeamWorkKPK\gamefifteen\GameFifteen.UI\obj\Debug\GameFifteenUI.csprojResolveAssemblyReference.cache

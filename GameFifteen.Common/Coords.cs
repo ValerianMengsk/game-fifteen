@@ -36,7 +36,6 @@ namespace GameFifteenCommon
             {
                 throw new ArgumentOutOfRangeException("Dimentions can not be negative!");
             }
-
             this.dimensions = dimensions;
             this.Row = row;
             this.Col = col;

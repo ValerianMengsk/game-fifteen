@@ -2,9 +2,9 @@
 
 namespace GameFifteenUI
 {
+    using GameFifteenCommon;
     using System;
     using System.Linq;
-    using GameFifteenCommon;
 
     /// <summary>
     /// Main class of the game.

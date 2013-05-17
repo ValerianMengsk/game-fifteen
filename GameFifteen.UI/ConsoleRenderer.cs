@@ -3,10 +3,10 @@
 namespace GameFifteenUI
 {
     using System;
-    using System.Collections.Generic;
     using System.Linq;
-    using System.Text;
     using GameFifteenCommon;
+    using System.Collections.Generic;
+    using System.Text;
     using Wintellect.PowerCollections;
 
     /// <summary>
@@ -35,12 +35,9 @@ namespace GameFifteenUI
             return Console.ReadLine();
         }
 
-        /// <summary>
-        /// Method that displays the field on the console
-        /// </summary>
-        public void PrintField(IList<int> fieldNumbers)
+        public void PrintField(IList<int> field)
         {
-            int dimensions = (int)Math.Sqrt(fieldNumbers.Count);
+            int dimensions = (int)Math.Sqrt(field.Count);
             int count = 0;
             StringBuilder fieldAsString = new StringBuilder();
 
@@ -50,33 +47,28 @@ namespace GameFifteenUI
                 fieldAsString.Append("|");
                 for (int col = 0; col < dimensions; col++)
                 {
-                    if (fieldNumbers[count] == 0)
+                    if (field[count] == 0)
                     {
                         fieldAsString.Append("    |");
                     }
                     else
                     {
-                        fieldAsString.AppendFormat(" {0,2} |", fieldNumbers[count]);
+                        fieldAsString.AppendFormat(" {0,2} |", field[count]);
                     }
-
                     count++;
                 }
 
                 fieldAsString.AppendLine();
             }
-
             fieldAsString.Append(' ' + new string('-', 19));
             Console.WriteLine(fieldAsString.ToString());
         }
 
-        /// <summary>
-        /// Method that displays the scoreboard on the console.
-        /// </summary>
         public void PrintScoreboard(OrderedMultiDictionary<int, string> scores)
         {
             if (scores.Count == 0)
             {
-                this.Write("Scoreboard is empty");
+                Write("Scoreboard is empty");
             }
             else
             {
@@ -98,8 +90,4 @@ namespace GameFifteenUI
             }
         }
     }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> bug fix, code update.

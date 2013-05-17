@@ -1,13 +1,9 @@
 ﻿namespace GameFifteen.Tests
 {
     using System;
-<<<<<<< HEAD
-    using GameFifteenCommon;
-    using Microsoft.VisualStudio.TestTools.UnitTesting;
-=======
+    using GameFifteen;
     using Microsoft.VisualStudio.TestTools.UnitTesting;
     using GameFifteenCommon;
->>>>>>> bug fix, code update.
 
     [TestClass]
     public class ScoreBoardTests
@@ -16,9 +12,8 @@
         public void InitializeEmptyScoreBoardTest()
         {
             ScoreBoard scoreBoard = new ScoreBoard();
-            string str = scoreBoard.Scores().Values.ToString();
-            str += scoreBoard.Scores().Keys.ToString();
-            Assert.IsTrue(str == "{}{}");
+
+            Assert.IsTrue(scoreBoard.ToString() == "Scoreboard is empty.");
         }
 
         [TestMethod]
@@ -29,10 +24,8 @@
             scoreBoard.Add("Pesho", 23);
             scoreBoard.Add("Gosho", 13);
             scoreBoard.Add("Tosho", 17);
-            string str = scoreBoard.Scores().Values.ToString();
-            str += scoreBoard.Scores().Keys.ToString();
 
-            Assert.AreEqual(str, "{Gosho,Tosho,Pesho}{13,17,23}");
+            Assert.AreEqual(scoreBoard.ToString(), "1. {Gosho} --> 13 moves\r\n2. {Tosho} --> 17 moves\r\n3. {Pesho} --> 23 moves\r\n");
         }
 
         [TestMethod]
@@ -48,9 +41,7 @@
             scoreBoard.Add("Mimi", 12);
             scoreBoard.Add("Tosho", 10);
 
-            string str = scoreBoard.Scores().Values.ToString();
-            str += scoreBoard.Scores().Keys.ToString();
-            Assert.AreEqual(str, "{Tosho,Mimi,Gosho,Stamat,Kiro,Ivan,Pesho}{10,12,13,14,17,18,23}");
+            Assert.AreEqual(scoreBoard.ToString(), "1. {Tosho} --> 10 moves\r\n2. {Mimi} --> 12 moves\r\n3. {Gosho} --> 13 moves\r\n4. {Stamat} --> 14 moves\r\n5. {Kiro} --> 17 moves\r\n");
         }
 
         [TestMethod]
@@ -64,7 +55,7 @@
         }
 
         [TestMethod]
-        ////[ExpectedException(typeof(ArgumentException))]
+        //[ExpectedException(typeof(ArgumentException))]
         public void AddTwoPlayersWithSameNameAndScoreTest()
         {
             ScoreBoard scoreBoard = new ScoreBoard();
@@ -79,9 +70,7 @@
             ScoreBoard scoreBoard = new ScoreBoard();
             scoreBoard.Add(string.Empty, 23);
 
-            string str = scoreBoard.Scores().Values.ToString();
-            str += scoreBoard.Scores().Keys.ToString();
-            Assert.AreEqual(str, "{Anonymous}{23}");
+            Assert.AreEqual(scoreBoard.ToString(), "1. {Anonymous} --> 23 moves\r\n");
         }
 
         [TestMethod]

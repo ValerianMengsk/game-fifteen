@@ -1,6 +1,4 @@
-﻿[module: System.Diagnostics.CodeAnalysis.SuppressMessage("StyleCop.CSharp.DocumentationRules", "*", Justification = "Reviewed. Suppression is OK here.")]
-
-namespace GameFifteenCommon
+﻿namespace GameFifteenCommon
 {
     using System;
     using System.Linq;
@@ -127,24 +125,11 @@ namespace GameFifteenCommon
                 switch (inputCommand)
                 {
                     case "top":
-                        {
-                            render.PrintScoreboard(scoreBoard.Scores());
-                            break;
-                        }
-
+                        render.PrintScoreboard(scoreBoard.Scores());
+                        break;
                     case "restart":
-<<<<<<< HEAD
-=======
                         this.StartNewGame(render, true);
                         break;
-                    default:
-                        if (this.IsNumberMovable(inputCommand))
->>>>>>> bug fix, code update.
-                        {
-                            this.StartNewGame(render);
-                            break;
-                        }
-
                     default:
                         {
                             if (this.IsNumberMovable(inputCommand))

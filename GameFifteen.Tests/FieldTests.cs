@@ -1,12 +1,9 @@
 ﻿namespace GameFifteen.Tests
 {
     using System;
-<<<<<<< HEAD
-=======
+    using GameFifteen;
     using Microsoft.VisualStudio.TestTools.UnitTesting;
->>>>>>> bug fix, code update.
     using GameFifteenCommon;
-    using Microsoft.VisualStudio.TestTools.UnitTesting;
 
     [TestClass]
     public class FieldTests
@@ -122,3 +119,4 @@
         }
     }
 }
+

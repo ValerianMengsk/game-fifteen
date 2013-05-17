@@ -5,6 +5,7 @@ namespace GameFifteenCommon
     using System;
     using System.Collections.Generic;
     using System.Linq;
+    using System.Text;
 
     /// <summary>
     /// Class that represents the playfield.
@@ -36,6 +37,10 @@ namespace GameFifteenCommon
         /// </summary>
         private List<int> numbers = null;
 
+        public int Dimensions
+        {
+            get { return dimensions; }
+        }
         /// <summary>
         /// Initializes a new instance of the <see cref="Field" /> class.
         /// Constructor that initializes and fills the field with numbers.
@@ -52,11 +57,6 @@ namespace GameFifteenCommon
             this.numberCoords = new Dictionary<int, Coords>();
             this.matrix = this.GenerateSolvedMatrix();
             this.GetRandomField();
-        }
-
-        public int Dimensions
-        {
-            get { return this.dimensions; }
         }
 
         /// <summary>
@@ -141,30 +141,42 @@ namespace GameFifteenCommon
             }
         }
 
-        public IList<int> GetFieldNumbers()
+        /// <summary>
+        /// Generating list of numbers, representing matrix indexes
+        /// </summary>
+        private List<int> GenerateMatrixIndexNumbers()
         {
-            List<int> fieldNumbers = new List<int>();
-
-            for (int row = 0; row < this.Dimensions; row++)
+            List<int> numbers = new List<int>();
+            int numbersCount = this.dimensions * this.dimensions;
+            for (int currNumber = 0; currNumber < numbersCount; currNumber++)
             {
-                for (int col = 0; col < this.Dimensions; col++)
-                {
-                    fieldNumbers.Add(this.field[row, col]);
-                }
+                numbers.Add(currNumber);
             }
-
-            return fieldNumbers;
+            return numbers;
         }
 
         /// <summary>
-        /// Checks if row and column are in the range of the playfield.
+        /// Generate solved matrix for specified dimensions.
         /// </summary>
-        private void ValidateDimensions(int row, int col)
+        // TODO: Fix this - one is List, and other is [,]..
+        private int[,] GenerateSolvedMatrix()
         {
-            if (!this.IsInRange(row) || !this.IsInRange(col))
+            int[,] solvedMatrix = new int[this.dimensions, this.dimensions];
+            int currNumber = 1;
+
+            for (int row = 0; row < this.dimensions; row++)
             {
-                throw new IndexOutOfRangeException("The dimensions you have provided are out of range!");
+                for (int col = 0; col < this.dimensions; col++)
+                {
+                    solvedMatrix[row, col] = currNumber;
+                    currNumber++;
+                }
             }
+
+            int maxDimention = this.dimensions - 1;
+            solvedMatrix[maxDimention, maxDimention] = 0;
+
+            return solvedMatrix;
         }
 
         /// <summary>
@@ -183,49 +195,27 @@ namespace GameFifteenCommon
         }
 
         /// <summary>
-        /// Generating list of numbers, representing matrix indexes
+        /// Checks if row and column are in the range of the playfield.
         /// </summary>
-        private List<int> GenerateMatrixIndexNumbers()
+        private void ValidateDimensions(int row, int col)
         {
-            List<int> numbers = new List<int>();
-            int numbersCount = this.dimensions * this.dimensions;
-
-            for (int currNumber = 0; currNumber < numbersCount; currNumber++)
+            if (!this.IsInRange(row) || !this.IsInRange(col))
             {
-                numbers.Add(currNumber);
+                throw new IndexOutOfRangeException("The dimensions you have provided are out of range!");
             }
-
-            return numbers;
         }
 
-        /// <summary>
-<<<<<<< HEAD
-        /// Generate solved matrix for specified dimensions.
-        /// </summary>
-        //// TODO: Fix this - one is List, and other is [,]..
-        private int[,] GenerateSolvedMatrix()
-=======
-        /// Generates all valid field numbers, in respect to the dimentions.
-        /// </summary>
         public IList<int> GetFieldNumbers()
->>>>>>> bug fix, code update.
         {
-            int[,] solvedMatrix = new int[this.dimensions, this.dimensions];
-            int currNumber = 1;
-
-            for (int row = 0; row < this.dimensions; row++)
+            List<int> FieldNumbers = new List<int>();
+            for (int row = 0; row < Dimensions; row++)
             {
-                for (int col = 0; col < this.dimensions; col++)
+                for (int col = 0; col < Dimensions; col++)
                 {
-                    solvedMatrix[row, col] = currNumber;
-                    currNumber++;
+                    FieldNumbers.Add(field[row, col]);
                 }
             }
-
-            int maxDimention = this.dimensions - 1;
-            solvedMatrix[maxDimention, maxDimention] = 0;
-
-            return solvedMatrix;
+            return FieldNumbers;
         }
     }
 }

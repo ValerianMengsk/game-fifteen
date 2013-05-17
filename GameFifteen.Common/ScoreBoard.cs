@@ -4,6 +4,7 @@ namespace GameFifteenCommon
 {
     using System;
     using System.Linq;
+    using System.Text;
     using Wintellect.PowerCollections;
 
     /// <summary>
@@ -14,7 +15,16 @@ namespace GameFifteenCommon
         /// <summary>
         /// OrderedMultiDictionary that keeps scores of the players.
         /// </summary>
-        private readonly OrderedMultiDictionary<int, string> scores;
+        private OrderedMultiDictionary<int, string> scores;
+
+        /// <summary>
+        /// Makes string that represents the score board.
+        /// </summary>
+        /// <returns>Score board as string.</returns>
+        public OrderedMultiDictionary<int, string> Scores()
+        {
+            return scores;
+        }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="Count" /> class.
@@ -24,28 +34,9 @@ namespace GameFifteenCommon
             this.scores = new OrderedMultiDictionary<int, string>(true);
         }
 
-        /// <summary>
-        /// Holds the number of scores.
-        /// </summary>
         public int Count
         {
-<<<<<<< HEAD
-            get { return this.scores.Count; }
-        }
-
-        /// <summary>
-        /// Makes string that represents the score board.
-        /// </summary>
-        /// <returns>Score board as string.</returns>
-        public OrderedMultiDictionary<int, string> Scores()
-        {
-            return this.scores;
-=======
-            get 
-            { 
-                return scores.Count; 
-            }
->>>>>>> bug fix, code update.
+            get { return scores.Count; }
         }
 
         /// <summary>
