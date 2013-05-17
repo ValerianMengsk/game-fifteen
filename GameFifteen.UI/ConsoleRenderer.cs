@@ -3,10 +3,10 @@
 namespace GameFifteenUI
 {
     using System;
-    using System.Linq;
-    using GameFifteenCommon;
     using System.Collections.Generic;
+    using System.Linq;
     using System.Text;
+    using GameFifteenCommon;
     using Wintellect.PowerCollections;
 
     /// <summary>
@@ -55,11 +55,13 @@ namespace GameFifteenUI
                     {
                         fieldAsString.AppendFormat(" {0,2} |", field[count]);
                     }
+
                     count++;
                 }
 
                 fieldAsString.AppendLine();
             }
+
             fieldAsString.Append(' ' + new string('-', 19));
             Console.WriteLine(fieldAsString.ToString());
         }
@@ -68,7 +70,7 @@ namespace GameFifteenUI
         {
             if (scores.Count == 0)
             {
-                Write("Scoreboard is empty");
+                this.Write("Scoreboard is empty");
             }
             else
             {
@@ -88,40 +90,6 @@ namespace GameFifteenUI
                     position++;
                 }
             }
-        }
-    }
-    public class TestRenderer : IRenderable
-    {
-        public void Write(string toDisplay)
-        {
-        }
-
-        public string Read(string message)
-        {
-            Random num = new Random();
-            //the bigger endNum is 
-            //the harder to hit the "exit", and the longer the Test is
-            int endNum = 41;
-            int myNum = num.Next(1, endNum);
-            switch(myNum)
-            {
-                case 17:
-                    return "restart";
-                case 18:
-                    return "top";
-                case 19:
-                    return "exit";
-                default:
-                    return myNum.ToString();
-            }
-        }
-
-        public void PrintField(IList<int> field)
-        {
-        }
-        public void PrintScoreboard(OrderedMultiDictionary<int, string> scores)
-        {
-            
         }
     }
 }

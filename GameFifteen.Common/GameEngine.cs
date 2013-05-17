@@ -26,14 +26,14 @@ namespace GameFifteenCommon
         private const int Dimentions = 4;
 
         /// <summary>
+        /// Singleton eager initialization.
+        /// </summary>
+        private static GameEngine gameEngineInstance = null;
+
+        /// <summary>
         /// Field that holds the gamefield.
         /// </summary>
         private Field gameField = null;
-
-        /// <summary>
-        /// Singleton eager initialization.
-        /// </summary>
-        private static GameEngine GameEngineInstance = null;
 
         /// <summary>
         /// Prevents a default instance of the <see cref="GameEngine" /> class from being created.
@@ -58,8 +58,8 @@ namespace GameFifteenCommon
         /// <returns>The instance of the GameEngine.</returns>
         public static GameEngine StartGame(IRenderable renderer)
         {
-            GameEngineInstance = new GameEngine(renderer);
-            return GameEngineInstance;
+            gameEngineInstance = new GameEngine(renderer);
+            return gameEngineInstance;
         }
 
         /// <summary>
@@ -113,7 +113,7 @@ namespace GameFifteenCommon
         private void BeginGame(IRenderable render)
         {
             ScoreBoard scoreBoard = new ScoreBoard();
-            render.PrintField(gameField.GetFieldNumbers());
+            render.PrintField(this.gameField.GetFieldNumbers());
             bool gameIsFinished = false;
             int moves = 0;
 
@@ -124,22 +124,31 @@ namespace GameFifteenCommon
                 switch (inputCommand)
                 {
                     case "top":
-                        render.PrintScoreboard(scoreBoard.Scores());
-                        break;
+                        {
+                            render.PrintScoreboard(scoreBoard.Scores());
+                            break;
+                        }
+
                     case "restart":
-                        this.StartNewGame(render);
-                        break;
+                        {
+                            this.StartNewGame(render);
+                            break;
+                        }
+
                     default:
-                        if (this.IsNumberMovable(inputCommand))
                         {
-                            this.MoveNumber(int.Parse(inputCommand));
-                            moves++;
+                            if (this.IsNumberMovable(inputCommand))
+                            {
+                                this.MoveNumber(int.Parse(inputCommand));
+                                moves++;
+                            }
+                            else
+                            {
+                                render.Write("Invalid Command");
+                            }
+
+                            break;
                         }
-                        else
-                        {
-                            render.Write("Invalid Command");
-                        }
-                        break;
                 }
 
                 render.PrintField(this.gameField.GetFieldNumbers());
@@ -183,6 +192,7 @@ namespace GameFifteenCommon
             {
                 return false;
             }
+
             var currCell = this.gameField.NumberCoords[0];
             var cellToBeMoveTo = this.gameField.NumberCoords[numberToMove];
             return this.CheckNeighbours(currCell, cellToBeMoveTo);

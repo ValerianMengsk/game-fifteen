@@ -10,3 +10,9 @@ D:\others\GitHub\Test\Uni HW\game-fifteen\GameFifteen.Common\obj\Debug\GameFifte
 D:\others\GitHub\Test\Uni HW\game-fifteen\GameFifteen.Common\obj\Debug\GameFifteen.Common.dll
 D:\others\GitHub\Test\Uni HW\game-fifteen\GameFifteen.Common\obj\Debug\GameFifteen.Common.pdb
 D:\others\GitHub\Test\Uni HW\game-fifteen\GameFifteen.Common\bin\Debug\PowerCollections.dll
+C:\Users\Simeon\Documents\GitHub\game-fifteen\GameFifteen.Common\bin\Debug\GameFifteen.Common.dll
+C:\Users\Simeon\Documents\GitHub\game-fifteen\GameFifteen.Common\bin\Debug\GameFifteen.Common.pdb
+C:\Users\Simeon\Documents\GitHub\game-fifteen\GameFifteen.Common\bin\Debug\PowerCollections.dll
+C:\Users\Simeon\Documents\GitHub\game-fifteen\GameFifteen.Common\obj\Debug\GameFifteen.Common.csprojResolveAssemblyReference.cache
+C:\Users\Simeon\Documents\GitHub\game-fifteen\GameFifteen.Common\obj\Debug\GameFifteen.Common.dll
+C:\Users\Simeon\Documents\GitHub\game-fifteen\GameFifteen.Common\obj\Debug\GameFifteen.Common.pdb

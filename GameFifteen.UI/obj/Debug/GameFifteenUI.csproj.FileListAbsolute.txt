@@ -12,3 +12,5 @@ C:\Users\desty\Documents\GitHub\game-15\game-fifteen\GameFifteen.UI\bin\Debug\Ga
 C:\Users\desty\Documents\GitHub\game-15\game-fifteen\GameFifteen.UI\bin\Debug\GameFifteen.UI.pdb
 C:\Users\desty\Documents\GitHub\game-15\game-fifteen\GameFifteen.UI\bin\Debug\GameFifteen.Common.dll
 C:\Users\desty\Documents\GitHub\game-15\game-fifteen\GameFifteen.UI\bin\Debug\GameFifteen.Common.pdb
+C:\Users\Simeon\Documents\GitHub\game-fifteen\GameFifteen.UI\obj\Debug\GameFifteen.UI.exe
+C:\Users\Simeon\Documents\GitHub\game-fifteen\GameFifteen.UI\obj\Debug\GameFifteen.UI.pdb

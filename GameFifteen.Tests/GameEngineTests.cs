@@ -1,12 +1,9 @@
 ﻿namespace GameFifteen.Tests
 {
-    using GameFifteenCommon;
     using System;
-    using System.IO;
-    using System.Text;
-    using GameFifteen;
-    using Microsoft.VisualStudio.TestTools.UnitTesting;
+    using GameFifteenCommon;
     using GameFifteenUI;
+    using Microsoft.VisualStudio.TestTools.UnitTesting;
 
     [TestClass]
     public class GameEngineTests

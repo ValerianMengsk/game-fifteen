@@ -18,15 +18,6 @@ namespace GameFifteenCommon
         private OrderedMultiDictionary<int, string> scores;
 
         /// <summary>
-        /// Makes string that represents the score board.
-        /// </summary>
-        /// <returns>Score board as string.</returns>
-        public OrderedMultiDictionary<int, string> Scores()
-        {
-            return scores;
-        }
-
-        /// <summary>
         /// Initializes a new instance of the <see cref="Count" /> class.
         /// </summary>
         public ScoreBoard()
@@ -36,7 +27,16 @@ namespace GameFifteenCommon
 
         public int Count
         {
-            get { return scores.Count; }
+            get { return this.scores.Count; }
+        }
+
+        /// <summary>
+        /// Makes string that represents the score board.
+        /// </summary>
+        /// <returns>Score board as string.</returns>
+        public OrderedMultiDictionary<int, string> Scores()
+        {
+            return this.scores;
         }
 
         /// <summary>

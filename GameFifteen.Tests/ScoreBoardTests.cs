@@ -1,10 +1,9 @@
 ﻿namespace GameFifteen.Tests
 {
     using System;
-    using GameFifteen;
-    using Microsoft.VisualStudio.TestTools.UnitTesting;
     using GameFifteenCommon;
-    using Wintellect.PowerCollections;
+    using Microsoft.VisualStudio.TestTools.UnitTesting;
+
     [TestClass]
     public class ScoreBoardTests
     {
@@ -60,7 +59,7 @@
         }
 
         [TestMethod]
-        //[ExpectedException(typeof(ArgumentException))]
+        ////[ExpectedException(typeof(ArgumentException))]
         public void AddTwoPlayersWithSameNameAndScoreTest()
         {
             ScoreBoard scoreBoard = new ScoreBoard();
